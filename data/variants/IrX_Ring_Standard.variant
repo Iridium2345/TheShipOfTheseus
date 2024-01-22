@@ -1,0 +1,11 @@
+{
+    "hullId": "IrX_Ring",
+    "variantId": "IrX_Ring_Standard",
+    "displayName": "虚影",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "quality": 1,
+    "hullMods":[],
+	"weaponGroups":[
+	],
+}

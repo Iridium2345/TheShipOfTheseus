@@ -1,0 +1,20 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+无畏者协议,IrX_agreement_fearless,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementFearless,"每个耗散通道增加 %s 最高航速
+每个寄存器增加 %s%% 武器射速 并减少 %s%% 武器幅能 ",IrX协议,,graphics/hullmods/unstable_injector.png
+
+守护者协议,IrX_agreement_guardian,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
+每个寄存器增加 %s%% 结构减伤 ",IrX协议,,graphics/hullmods/unstable_injector.png
+
+构建者协议,IrX_agreement_builder,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementBuilder,"增加 %s 个飞行甲板
+每个耗散通道增加 %s%% 整备速度
+每个寄存器增加 %s%% 整备速度",IrX协议,,graphics/hullmods/unstable_injector.png
+
+观察者协议,IrX_agreement_observer,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementObserver,"每个耗散通道增加 %s 武器射程
+每个寄存器增加 %s%% 武器射程",IrX协议,,graphics/hullmods/unstable_injector.png
+
+协议:初心,IrX_agreement_beginner,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementBeginner,"每个耗散通道增加 %s 武器射程
+每个寄存器增加 %s%% 武器射程",IrX协议,,graphics/hullmods/unstable_injector.png
+
+量子化舰体,IrX_quantized_hull,3,,,,,,,TRUE,,3,5,10,15,data.hullmods.QuantizedHull,"每秒恢复 %s%% 结构
+结构增加 %s%%
+根据当前幅能水平获得减伤,最高 %s%%",IrX协议,,graphics/hullmods/unstable_injector.png

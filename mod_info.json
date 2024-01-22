@@ -1,0 +1,9 @@
+{
+    "id": "IrX",
+    "name": "Iridium Ship Package",
+    "author": "Iridum",
+    "version": "0.0.1 beta",
+    "description": "Null",
+    "gameVersion": "0.96a-RC10",
+    #"modPlugin": "data.scripts.IrXPlugin"
+}

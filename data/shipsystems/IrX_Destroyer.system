@@ -1,0 +1,15 @@
+{
+	"id":"IrX_Destroyer",
+	"type":"ENGINE_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.system.ai.IrX_DestroyerAI",
+	
+	"statsScript":"data.scripts.system.IrX_Destroyer",
+	
+	"canNotCauseOverload":false,
+	"runScriptWhileIdle":false,  # this means unapply() never gets called
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_termination_sequence",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

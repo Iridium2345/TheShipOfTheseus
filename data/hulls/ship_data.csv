@@ -1,0 +1,13 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+法线,IrX_Normal,IrX,IrX,,,300,20,150,,50,0,,335,500,400,90,270,200,PHASE,IrX_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,114
+地平线,IrX_Horizon,IrX,IrX,IrX_Destroyer,,400,60,350,,50,0,,170,240,200,40,120,200,PHASE,IrX_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,116
+天际线,IrX_Skyline,IrX,IrX,IrX_QuantumJump,,1750,60,350,,50,0,,220,350,350,100,240,200,PHASE,IrX_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,115
+环,IrX_Ring,IrX,IrX,,,3000,60,350,,50,0,,300,240,200,120,360,30,PHASE,IrX_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,2116
+
+标量,IrX_Scalar,护卫舰,IrX,IrX_QuantumJump,5,2000,10,2250,1875,250,65,,150,130,100,60,120,200,PHASE,IrX_QuickRebuild,150,0.4,0.7,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,8,10,,,,,,,,,,0.5,2,2,,3212
+矢量,IrX_Vector,驱逐舰,IrX,IrX_QuantumTunneling,10,4000,10,6000,6667,500,115,,100,90,60,40,100,300,PHASE,IrX_QuickRebuild,120,0.3,0.6,,,35,50,50,40,2,20,9,60000,5,20,300,0.25,18,18,,,,,,,,,,0.7,2,3,,3213
+矩阵,IrX_Matrix,重型巡洋舰,IrX,IrX_QuantumTargeting,15,10000,10,10000,11000,750,165,,60,40,30,15,20,1500,PHASE,IrX_QuantumRebuild,210,0.4,0.8,,,200,300,150,150,4,38,8,125000,4,12,480,0.25,33,33,,,,,,,,,,0.5,2,4,,401.5
+张量,IrX_Tensor,无人战列巡洋舰,IrX,IrX_Ring,24,12000,10,20000,25000,1200,320,,80,70,50,12,16,3000,PHASE,IrX_QuantumRebuild,90,0.4,0.6,,,0,0,150,300,10,30,9,350000,3,15,600,0.25,50,50,,,,,,,,,,0.5,2,4,,32514
+流形,IrX_Manifold,战术航母,IrX,IrX_QuantumRaid,28,14000,10,15000,24000,1000,340,4,30,15,15,6,6,3500,PHASE,IrX_QuantumRebuild,180,0.4,1,,,700,1500,300,300,15,20,7,375000,3,12,720,0.25,50,50,,,,,,,,,,0.4,2,4,,32507
+无量,IrX_Infinite_Core,无畏战列巡洋舰,IrX,IrX_Ring,28,30000,10,20000,30000,1400,400,2,75,75,75,30,20,8500,PHASE,IrX_QuantumRebuild,180,0.4,1,,,750,1500,300,400,15,27,7,350000,3,12,3000,0.25,120,60,,,,,,,,,,0.4,2,4,,32500
+
