@@ -1,7 +1,10 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
 量子 SRM,IrX_Quantum_srm,3,,40000,1500,,500,,15,50,0,1,0,,ENERGY,500,,0,0.5,1,,0,0,0,0,,600,200,3,250,,,"DO_NOT_AIM, DO_NOT_CONSERVE","utility8, missile9, strike7, omega, restricted",,未知,,反小型舰艇,极快,优秀,,,,,,,TRUE,3110
-彗星X,IrX_LARGE,3,,80000,1000,,1200,0,10,20,30,,,,ENERGY,1250,,0.5,2,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.26
-彗星Y,IrX_MEDIUM,3,,40000,800,,400,0,10,20,15,,,,ENERGY,375,,0.25,0.25,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.27
-彗星Z,IrX_SMALL,3,,20000,700,,100,0,10,20,8,,,,ENERGY,75,,0.1,0.1,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.28
+彗星,IrX_LARGE,3,,80000,1000,,1200,0,10,20,30,,,,ENERGY,1250,,0.5,2,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.26
+流星,IrX_MEDIUM,3,,40000,800,,400,0,10,20,15,,,,ENERGY,375,,0.25,0.25,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.27
+陨星,IrX_SMALL,3,,20000,700,,100,0,10,20,8,,,,ENERGY,75,,0.1,0.1,,,0,0,0,3,,1800,,,,,,,"energy15",,,,,,,,,,,,,,3122.28
 
-火神炮,IrX_vulcan,1,,200,450,,25,,1,75,4,,,,FRAGMENTATION,1,,0,0.05,1,,0,15,1,15,,1200,,,10,,,PD,"pd7, SR, merc, ind",,,,点防御,,,,,,,,,,1
+星芒突袭者,IrX_Starlight_Raider,3,,80000,900,,500,0,10,20,30,,,,HIGH_EXPLOSIVE,3500,,0,15,,,0,0,0,3,,1600,,,,,,,"energy15",,,,,,,,,,,,,,3123
+星辉压制者,IrX_Starlight_Suppressor,3,,80000,900,,500,0,10,20,30,,,,KINETIC,3500,,0,15,,,0,5,1,3,,1600,,,,,,,"energy15",,,,,,,,,,,,,,3124
+
+星尘,IrX_dust,2,,200,450,,25,,1,75,4,,,,FRAGMENTATION,1,,0.02,0.02,1,,0,5,1,15,,7200,,,10,,,PD,"pd7, SR, merc, ind",,,,点防御,,,,,,,,,,1

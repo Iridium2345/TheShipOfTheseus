@@ -1,7 +1,7 @@
 {
 	"hullId": "IrX_Skyline",
     "variantId": "IrX_Skyline_Fighter",
-    "displayName": "轰炸机",
+    "displayName": "战斗机",
     "fluxCapacitors": 0,
     "fluxVents": 0,
     "quality": 1,
@@ -9,14 +9,17 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 001":"IrX_MEDIUM",
-		 			"WS 002":"IrX_vulcan",
-		 			"WS 003":"IrX_vulcan",
+		 			"WS 001":"IrX_SMALL"
 		 		   },
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			#"WS 003":"swarmer_fighter",
+		 			"WS 002":"IrX_dust",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 003":"IrX_dust",
 		 		   },
 		},
 	],

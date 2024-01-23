@@ -1,0 +1,19 @@
+{
+	"id":"IrX_Starlight_Raider_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"onHitEffect":"data.scripts.weapon.RaiderOnHit",
+	"length":150.0,
+	"width":55.0,
+	"hitGlowRadius":100,
+	"fadeTime":0.3,
+	"fringeColor":[160,160,255,255],
+	"coreColor":[50,20,50,255],
+	"textureType":"SMOOTH",
+	"textureScrollSpeed":-256,
+	"pixelsPerTexel":1.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true
+}

@@ -1,5 +1,5 @@
 {
-	"id":"IrX_vulcan",  # this id must match what's in the spreadsheet
+	"id":"IrX_dust",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type": "BALLISTIC",
   	"mountTypeOverride": "HYBRID",
@@ -24,6 +24,6 @@
 					   "particleDuration":0.15,
 					   "particleCount":7,
 					   "particleColor":[255,240,165,200]},
-	"projectileSpecId":"vulcan_shot",  # projectile that will be fired
+	"projectileSpecId":"IrX_dust_shot",  # projectile that will be fired
 	"fireSoundTwo":"vulcan_cannon_fire",
 }

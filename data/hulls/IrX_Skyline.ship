@@ -66,24 +66,24 @@
             "type": "SYNERGY"
         },
         {
-            "angle": 0,
-            "arc": 4,
+            "angle": 30,
+            "arc": 300,
             "id": "WS 002",
             "locations": [
-                12,
-                3
+                4,
+                5
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
             "type": "ENERGY"
         },
         {
-            "angle": 0,
-            "arc": 4,
+            "angle": -30,
+            "arc": 300,
             "id": "WS 003",
             "locations": [
-                12,
-                -3
+                4,
+                -5
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
