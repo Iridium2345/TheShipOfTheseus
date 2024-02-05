@@ -1,0 +1,19 @@
+{
+    "id":"IrX_QuantumImpact",
+	"type":"ENGINE_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.system.ai.IrX_QuantumImpactAI",
+	
+    "statsScript":"data.scripts.system.IrX_QuantumImpact",
+    "canNotCauseOverload":false,
+	"runScriptWhileIdle":true,
+
+    "soundFilterType":"LOWPASS",
+	"soundFilterGain":0.8,
+	"soundFilterGainHF":0.25,
+	
+	"useSound":"system_phase_cloak_activate",
+	#"deactivateSound":"system_phase_cloak_deactivate",
+	"deactivateSound":"system_phase_cloak_deactivate",
+	"outOfUsesSound":"system_phase_cloak_collision",
+}

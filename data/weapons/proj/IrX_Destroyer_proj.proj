@@ -1,5 +1,5 @@
 {
-	"id":"terminator_missile_projY",
+	"id":"IrX_Destroyer_proj",
 	"specClass":"missile",	
 	"missileType":"MISSILE",
 	"onHitEffect":"com.fs.starfarer.api.impl.combat.MoteOnHitEffect",

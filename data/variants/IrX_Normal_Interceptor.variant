@@ -9,14 +9,9 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 001":"pdburst_fighter",
-		 			#"WS 002":"pdburst",
+		 			"WS 001":"IrX_dust",
+                    "WS 002":"IrX_dust"
 		 		   },
 		},
-		#{"mode":"LINKED",
-		# "weapons":{
-		# 			#"WS 002":"fragbomb",
-		# 		   },
-		#},
 	],
 }

@@ -9,17 +9,17 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 001":"IrX_SMALL"
+		 			"WS 001":"IrX_MEDIUM"
 		 		   },
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 002":"IrX_dust",
+		 			"WS 002":"IrX_SMALL",
 		 		   },
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 003":"IrX_dust",
+		 			"WS 003":"IrX_SMALL",
 		 		   },
 		},
 	],

@@ -10,6 +10,7 @@ import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 
@@ -21,6 +22,7 @@ public class RaiderOnHit  implements OnHitEffectPlugin{
         boolean shieldHit,
         ApplyDamageResultAPI damageResult,
         CombatEngineAPI engine) {
+			if(!(target instanceof ShipAPI))return;
             if(!shieldHit)engine.spawnDamagingExplosion(Explosion(),projectile.getSource(), point);
     }
 
@@ -43,7 +45,7 @@ public class RaiderOnHit  implements OnHitEffectPlugin{
 		);
 
 		spec.setDamageType(DamageType.HIGH_EXPLOSIVE);
-		spec.setUseDetailedExplosion(false);
+		spec.setUseDetailedExplosion(true);
 		return spec;		
 	}
 }

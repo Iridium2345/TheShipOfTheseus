@@ -1,4 +1,4 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
-IrX_Skyline_wing,IrX_Skyline_Fighter,"no_sell, bomber, remnant, bomber5, auto_fighter, merc",3,,5,18,V,4000,2500,750,1,BOMBER,无人战斗机,32,8000,,,,,,,,,,,,,2421
-IrX_Normal_wing,IrX_Normal_Interceptor,"no_sell, interceptor, remnant, interceptor5, auto_fighter, merc",3,,4,8,CLAW,4000,200,750,5,INTERCEPTOR,无人截击机,10,5000,,,,,,,,,,,,,2422
-IrX_Horizon_wing,IrX_Horizon_Bomber,"no_sell, fighter, remnant, fighter5, auto_fighter, merc",3,,6,10,V,4000,500,,3,FIGHTER,无人轰炸机,12,6000,,,,,,,,,,,,,2423
+IrX_Skyline_wing,IrX_Skyline_Fighter,"no_sell, bomber, bomber5, auto_fighter, merc",3,,5,25,V,4000,2500,750,1,BOMBER,无人战斗机,32,8000,,,,,,,,,,,,,2421
+IrX_Normal_wing,IrX_Normal_Interceptor,"no_sell, interceptor, interceptor5, auto_fighter, merc",3,,4,18,CLAW,1500,200,750,2,INTERCEPTOR,无人截击机,10,5000,,,,,,,,,,,,,2422
+IrX_Horizon_wing,IrX_Horizon_Bomber,"no_sell, fighter, fighter5, auto_fighter, merc",3,,6,18,CLAW,4000,500,,3,FIGHTER,无人轰炸机,10,6000,,,,,,,,,,,,,2423

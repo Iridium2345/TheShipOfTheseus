@@ -22,7 +22,7 @@ public class QuantizedHull extends BaseHullMod{
     
     protected Object STATUSKEY1 = new Object();
     
-    private static final float REPAIR = 0.005f;
+    private static final float REPAIR = 0.0025f;
     private static final float BASE_ALPHA = 0.1f;
     private static final float ALPHA = 0.8f;
     private static final Color color = new Color(90,255,255,35);
@@ -36,7 +36,7 @@ public class QuantizedHull extends BaseHullMod{
     public static final float BASE_RANGE=2f;
     public static final float RANGE=6f;
 
-    public static final float WEAPON_ENGINE_BONUS=0.75f;
+    public static final float WEAPON_ENGINE_BONUS=0.95f;
 
     public static final float FRAG_TAKEN=0.5f;
 

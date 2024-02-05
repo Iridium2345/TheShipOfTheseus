@@ -165,6 +165,7 @@
     "builtInMods": [
         "IrX_quantized_hull"
     ],
+    "builtInWings": ["IrX_Skyline_wing"],
     "hullSize": "CAPITAL_SHIP",
     "shieldCenter": [
         9,

@@ -1,5 +1,5 @@
 {
-	"id":"terminator_missileY",
+	"id":"IrX_Destroyer",
 	"specClass":"projectile",
 	"type":"MISSILE",
 	"size":"SMALL",
@@ -25,6 +25,6 @@
 				 "blowbackLength":30.0,
 				 "blowbackSpread":10.0,
 				 "particleColor":[100,100,100,0]},
-	"projectileSpecId":"terminator_missile_projY",
+	"projectileSpecId":"IrX_Destroyer_proj",
 	#"fireSoundTwo":"harpoon_fire",
 }

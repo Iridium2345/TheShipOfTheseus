@@ -4,7 +4,8 @@
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",
 	"collisionClassByFighter":"RAY_FIGHTER",
-	"length":60.0,
+	"onHitEffect":"data.scripts.weapon.DustOnHit",
+	"length":30.0,
 	"width":10.0,
 	"hitGlowRadius":5,
 	"fadeTime":0.02,
@@ -12,7 +13,5 @@
 	"coreColor":[230,200,255,255],
 	"textureType":"SMOOTH",
 	"textureScrollSpeed":-256,
-	"pixelsPerTexel":5.0,
-	"passThroughMissiles":true,
-	"passThroughFighters":true
+	"pixelsPerTexel":5.0
 }

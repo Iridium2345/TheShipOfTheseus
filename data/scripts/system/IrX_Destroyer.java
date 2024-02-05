@@ -111,7 +111,7 @@ public class IrX_Destroyer extends BaseShipSystemScript implements DroneStrikeSt
 	}
 
 	protected String getWeaponId() {
-		return "terminator_missileY";
+		return "IrX_Destroyer";
 	}
 	
 	protected WeaponAPI weapon;

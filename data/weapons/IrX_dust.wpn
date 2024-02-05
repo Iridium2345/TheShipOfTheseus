@@ -1,5 +1,5 @@
 {
-	"id":"IrX_dust",  # this id must match what's in the spreadsheet
+	"id":"IrX_dust",
 	"specClass":"projectile",
 	"type": "BALLISTIC",
   	"mountTypeOverride": "HYBRID",
