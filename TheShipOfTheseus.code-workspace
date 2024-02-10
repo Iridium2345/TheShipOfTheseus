@@ -1,0 +1,19 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../starsector-core"
+		}
+	],
+    "settings": {
+        "java.project.sourcePaths": [
+			""
+		],
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar",
+			"lwjgl_util.jar"
+		]
+    }
+}
