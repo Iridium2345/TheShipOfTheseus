@@ -3,14 +3,14 @@ package data.hullmods;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-public class AgreementObserver extends IrXAgreement {
+public class AgreementObserver extends TSOTAgreement {
 	
 	private static final float RANGE_BONUS_1=6f;
 	private static final float RANGE_BONUS_2=0.005f;
 	private static final float DISSIPATION_REDUCE=0.15f;
 
 	static{
-		SubMods.add("IrX_agreement_observer");
+		SubMods.add("TSOT_agreement_observer");
 	}
 
 	@Override

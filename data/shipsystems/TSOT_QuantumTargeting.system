@@ -1,0 +1,19 @@
+{
+    "id":"TSOT_QuantumTargeting",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE_TOGGLE",
+	#"aiType":"CUSTOM",
+	#"aiScript":"data.scripts.system.ai.TSOT_QuantumTargetingAI",
+	
+    "statsScript":"data.scripts.system.TSOT_QuantumTargeting",
+    "canNotCauseOverload":true,
+
+    "soundFilterType":"LOWPASS",
+	"soundFilterGain":0.8,
+	"soundFilterGainHF":0.25,
+	
+	"useSound":"system_phase_cloak_activate",
+	#"deactivateSound":"system_phase_cloak_deactivate",
+	"deactivateSound":"system_phase_cloak_deactivate",
+	"outOfUsesSound":"system_phase_cloak_collision",
+}

@@ -1,0 +1,32 @@
+{
+  "hullName": "Ring",
+  "hullId": "TSOT_Ring",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/TSOT_Ring.png",
+  "style": "HIGH_TECH",
+  "height": 100,
+  "width": 100,
+  "center": [50, 50],
+  "collisionRadius": 40,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 45,
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "engineSlots": [],
+  "builtInMods": [
+    "TSOT_quantized_hull",
+    "TSOT_weapon_power",
+    "TSOT_agreement_guardian"
+    ],
+  "bounds": [
+    0,47,
+    34,34,
+    47,0,
+    34,-34,
+    0,-47,
+    -34,-34,
+    -47,0,
+    -34,34,
+    0,47
+  ]
+}

@@ -7,14 +7,14 @@ import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-public class AgreementFearless extends IrXAgreement {
+public class AgreementFearless extends TSOTAgreement {
 	
 	private static final float SPEED_BOOST=1f;
 	private static final float WP_BONUS=0.015f;
 	private static final float CAPACITY_REDUCE=0.2f; 
 
 	static{
-		SubMods.add("IrX_agreement_fearless");
+		SubMods.add("TSOT_agreement_fearless");
 	}
 
 	@Override

@@ -1,0 +1,34 @@
+{
+    "id": "TSOT_QuantumTunneling",
+    "type": "ENGINE_MOD",
+    "aiType": "BURN_DRIVE_TOGGLE",
+
+    "statsScript": "data.scripts.system.TSOT_QuantumTunneling",
+
+    "engineGlowLengthMult": 10,
+    "engineGlowWidthMult": 2,
+    "engineGlowGlowMult": 3,
+
+    "flameoutOnImpactChance": 0,
+
+    "clampTurnRateAfter": true,
+    "clampMaxSpeedAfter": true,
+
+    "soundFilterType": "LOWPASS",
+    "soundFilterGain": 0.75,
+    "soundFilterGainHF": 0.5,
+
+    "fadeActivationSoundOnChargedown": true,
+    "useSound": "system_temporalshell",
+    "loopSound": "system_temporalshell_loop",
+    "deactivateSound": "system_temporalshell_off",
+    "outOfUsesSound": "gun_out_of_ammo",
+
+    "aiHints": {
+        "activeSpeedIncrease": 100,
+        #not right since it 's ship-dependent, but hopefully close enough
+        "burstMovementPotential": 0,
+        "averageSpeedMult": 1.95
+    }
+
+}
