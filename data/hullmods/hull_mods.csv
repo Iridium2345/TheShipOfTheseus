@@ -3,18 +3,29 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 每个寄存器增加 %s%% 武器射速 并减少 %s%% 武器幅能 ",IrX协议,,graphics/hullmods/unstable_injector.png
 
 守护者协议,IrX_agreement_guardian,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
-每个寄存器增加 %s%% 结构减伤 ",IrX协议,,graphics/hullmods/unstable_injector.png
+每个寄存器增加 %s%% 减伤
+降低 %s%% 最高航速",IrX协议,,graphics/hullmods/unstable_injector.png
 
-构建者协议,IrX_agreement_builder,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementBuilder,"增加 %s 个飞行甲板
-每个耗散通道增加 %s%% 整备速度
-每个寄存器增加 %s%% 整备速度",IrX协议,,graphics/hullmods/unstable_injector.png
+构建者协议,IrX_agreement_builder,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementBuilder,"每个耗散通道增加 %s%% 整备速度
+每个寄存器增加 %s%% 整备速度
+根据舰船级别增加 1~2 个飞行甲板
+降低 %s%% 舰体结构",IrX协议,,graphics/hullmods/unstable_injector.png
 
-观察者协议,IrX_agreement_observer,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementObserver,"每个耗散通道增加 %s 武器射程
-每个寄存器增加 %s%% 武器射程",IrX协议,,graphics/hullmods/unstable_injector.png
+观察者协议,IrX_agreement_observer,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementObserver,"每个耗散通道增加 %s%% 武器射程
+每个寄存器增加 %s 武器射程
+降低 %s%% 幅能耗散",IrX协议,,graphics/hullmods/unstable_injector.png
 
-协议:初心,IrX_agreement_beginner,3,,,"no_build_in",IrX协议,,,,,10,20,30,50,data.hullmods.AgreementBeginner,"每个耗散通道增加 %s 武器射程
-每个寄存器增加 %s%% 武器射程",IrX协议,,graphics/hullmods/unstable_injector.png
+协议:初心,IrX_agreement_beginner,3,,,,IrX协议,,,TRUE,,0,0,0,0,data.hullmods.AgreementBeginner,"每个耗散通道增加 %s%% 幅能耗散
+每个寄存器增加 %s%% 幅能容量",IrX协议,,graphics/hullmods/unstable_injector.png
 
-量子化舰体,IrX_quantized_hull,3,,,,,,,TRUE,,3,5,10,15,data.hullmods.QuantizedHull,"每秒恢复 %s%% 结构
+量子化舰体,IrX_quantized_hull,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.QuantizedHull,"每秒恢复 %s%% 结构
 结构增加 %s%%
-根据当前幅能水平获得减伤,最高 %s%%",IrX协议,,graphics/hullmods/unstable_injector.png
+受到的破片伤害减少 %s%%
+受到的EMP伤害减少 %s%%
+根据当前损失结构获得减伤,最高 %s%%",IrX协议,,graphics/hullmods/unstable_injector.png
+
+武器效率模块,IrX_weapon_power,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.WeaponPower,"每额外 1%% 的武器效率提供:
+%s%% 的 武器射速
+%s%% 的 武器伤害
+但武器的幅能产出增加 %s%%  
+基础为 %s%%",IrX协议,,graphics/hullmods/unstable_injector.png

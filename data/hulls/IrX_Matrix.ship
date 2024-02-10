@@ -112,7 +112,8 @@
     "hullName": "Matrix",
     "hullSize": "CRUISER",
     "builtInMods": [
-        "IrX_quantized_hull"
+        "IrX_quantized_hull",
+        "IrX_weapon_power"
     ],
     "shieldCenter": [
         3,

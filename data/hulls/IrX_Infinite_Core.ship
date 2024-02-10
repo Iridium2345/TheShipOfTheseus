@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "IrX_quantized_hull",
+    "IrX_weapon_power",
     "IrX_agreement_beginner",
     "advancedcore"
   ],

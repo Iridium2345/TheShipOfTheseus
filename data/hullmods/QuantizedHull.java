@@ -1,8 +1,6 @@
 package data.hullmods;
 
 import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -10,9 +8,7 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
-import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 
@@ -61,7 +57,7 @@ public class QuantizedHull extends BaseHullMod{
         
         if(player){
             
-            Global.getCombatEngine().maintainStatusForPlayerShip(STATUSKEY1,
+            engine.maintainStatusForPlayerShip(STATUSKEY1,
 					"graphics/icons/hullsys/fortress_shield.png", spec.getDisplayName(), "伤害减免" + (int)(TakenMult*100) + "%", false);
         }
 
@@ -80,7 +76,9 @@ public class QuantizedHull extends BaseHullMod{
     public String getDescriptionParam(int index, HullSize hullSize) {
 		if(index==0)return String.format("%.1f", REPAIR*100);
         if(index==1)return String.format("%.1f", (HITPOINTS_MULT-1)*100);
-        if(index==2)return String.format("%.1f", DAMAGE_TAKEN*100);
+        if(index==2)return String.format("%.1f", FRAG_TAKEN*100);
+        if(index==3)return String.format("%.1f", WEAPON_ENGINE_BONUS*100);
+        if(index==4)return String.format("%.1f", DAMAGE_TAKEN*100);
 		return null;
 	}
 }

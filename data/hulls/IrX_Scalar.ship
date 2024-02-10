@@ -83,7 +83,8 @@
         0
     ],
     "builtInMods": [
-        "IrX_quantized_hull"
+        "IrX_quantized_hull",
+        "IrX_weapon_power"
     ],
     "shieldRadius": 70,
     "spriteName": "graphics/ships/IrX_Scalar.png",

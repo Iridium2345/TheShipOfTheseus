@@ -1,69 +1,66 @@
 package data.hullmods;
 
-import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.fs.starfarer.api.combat.BaseHullMod;
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
-import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.CombatEntityAPI;
-import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-public class AgreementFearless extends BaseHullMod {
+public class AgreementFearless extends IrXAgreement {
 	
-	private static final float SPEED_BOOST=0.75f;
-	private static final float ROF_BONUS=1f;
-	private static final float FLUX_REDUCTION=0.005f;
-	private static final Color GREEN = new Color(68, 183, 188, 255);
-	@Override
-    public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
-		float FluxVents=(float)ship.getVariant().getNumFluxVents();
-		float FluxCapacitors=(float)ship.getVariant().getNumFluxCapacitors();
-		if (ship != null) {
-			tooltip.addPara(String.format("航速加成: %.1f", FluxVents*SPEED_BOOST),GREEN,10f);
-			tooltip.addPara(String.format("射速加成: %.1f", FluxCapacitors*ROF_BONUS)+"%",GREEN,10f);
-			tooltip.addPara(String.format("武器幅能减免: %.1f", (FluxCapacitors*FLUX_REDUCTION)*100)+"%",GREEN,10f);
-		} 
+	private static final float SPEED_BOOST=1f;
+	private static final float WP_BONUS=0.015f;
+	private static final float CAPACITY_REDUCE=0.2f; 
+
+	static{
+		SubMods.add("IrX_agreement_fearless");
 	}
 
 	@Override
-	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		float FluxVents;
-		float FluxCapacitors;
-		if(stats.getEntity() instanceof ShipAPI){
-			ShipAPI ship=(ShipAPI)stats.getEntity();
-			FluxVents=(float)ship.getVariant().getNumFluxVents();
-			FluxCapacitors=(float)ship.getVariant().getNumFluxCapacitors();
-		}else{
+	public void advanceInCombat(ShipAPI ship, float amount){
+		CombatEngineAPI engine = Global.getCombatEngine();
+		Object test=ship.getCustomData().get(WeaponPower.KEY);
+		if(test==null){
+			engine.maintainStatusForPlayerShip(this,
+					"graphics/icons/hullsys/flare_launcher.png", spec.getDisplayName(),"NULL", false);
 			return;
 		}
-		stats.getMaxSpeed().modifyFlat(id,FluxVents*SPEED_BOOST);
-		stats.getBallisticRoFMult().modifyPercent(id, ROF_BONUS * FluxCapacitors);
-        stats.getEnergyRoFMult().modifyPercent(id, ROF_BONUS * FluxCapacitors);
-		stats.getBallisticWeaponFluxCostMod().modifyMult(id, 1f - (FLUX_REDUCTION * FluxCapacitors));
-		stats.getEnergyWeaponFluxCostMod().modifyMult(id, 1f - (FLUX_REDUCTION * FluxCapacitors));
+		if(!(test instanceof MutableStat)){
+			engine.maintainStatusForPlayerShip(this,
+					"graphics/icons/hullsys/flare_launcher.png", spec.getDisplayName(),"NOT INSTANCE", false);
+			return;
+		}
+		MutableStat wp=(MutableStat)test;
+		wp.modifyFlat(this.spec.getId(),ship.getVariant().getNumFluxCapacitors()*WP_BONUS);
+		ship.setCustomData(WeaponPower.KEY, wp);
+	}
+
+	@Override
+	protected void decrease(MutableShipStatsAPI stats, String id, float numFluxVents, float numFluxCapacitors) {
+		stats.getFluxCapacity().modifyMult(id,1f-CAPACITY_REDUCE);
+	}
+
+	@Override
+	protected void increase(MutableShipStatsAPI stats, String id, float numFluxVents, float numFluxCapacitors) {
+		stats.getMaxSpeed().modifyFlat(id,numFluxVents*SPEED_BOOST);
+	}
+
+	@Override
+	protected String getDescriptionCapacitors(float numFluxCapacitors) {
+		return String.format("武器效率: %.1f%%", numFluxCapacitors*WP_BONUS*100);
+	}
+
+	@Override
+	protected String getDescriptionVents(float numFluxVents) {
+		return String.format("航速加成: %.1f", numFluxVents*SPEED_BOOST);
 	}
 
 	@Override
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if(index==0)return ""+SPEED_BOOST;
-		if(index==1)return ""+ROF_BONUS;
-		if(index==2)return ""+FLUX_REDUCTION*100;
+		if(index==1)return ""+WP_BONUS*100;
+		if(index==2)return ""+CAPACITY_REDUCE*100;
 		return null;
 	}
-	
-	@Override
-	public boolean isApplicableToShip(ShipAPI ship) {
-		if (ship.getVariant().hasHullMod("IrX_quantized_hull"))return true;
-		return false;
-	}
-
-	@Override
-	public String getUnapplicableReason(ShipAPI ship) {
-		if (!ship.getVariant().hasHullMod("IrX_quantized_hull"))return "只能被安装在量子化的舰体上";
-		return null;
-	}
-
 }
