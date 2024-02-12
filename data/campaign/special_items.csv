@@ -1,0 +1,4 @@
+name,id,tags,rarity,base price,stack size,cargo space,icon,sound id,sound id drop,plugin,plugin params,desc,order
+忒修斯舰船,TSOT_ship_bp_package,"package_bp,no_drop",,200000,1000,1,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,TSOT_ship_bp,内含舰船图纸若干,234541
+忒修斯武器,TSOT_weapon_bp_package,"package_bp,no_drop",,100000,1000,1,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,TSOT_weapon_bp,内含武器图纸若干,234542
+忒修斯LPC,TSOT_LPC_bp_package,"package_bp,no_drop",,150000,1000,1,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,TSOT_LPC_bp,内含LPC图纸若干,234543

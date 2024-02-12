@@ -86,10 +86,8 @@ public class TSOT_QuantumTunneling extends BaseShipSystemScript{
     @Override
     public void unapply(MutableShipStatsAPI stats,String id){
         ShipAPI ship = null;
-		boolean player = false;
 		if (stats.getEntity() instanceof ShipAPI) {
 			ship = (ShipAPI) stats.getEntity();
-			player = ship == Global.getCombatEngine().getPlayerShip();
 			id = id + "_" + ship.getId();
 		} else {
 			return;

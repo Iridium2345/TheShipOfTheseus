@@ -2,11 +2,8 @@ package data.scripts.system;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
@@ -14,15 +11,12 @@ import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
-import com.fs.starfarer.api.combat.EmpArcEntityAPI;
-import com.fs.starfarer.api.combat.FighterLaunchBayAPI;
 import com.fs.starfarer.api.combat.GuidedMissileAI;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
-import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -143,7 +137,6 @@ public class TSOT_Destroyer extends BaseShipSystemScript implements DroneStrikeS
 	public void convertDrones(ShipAPI ship, final ShipAPI target) {
 		CombatEngineAPI engine = Global.getCombatEngine();
 		fired = true;
-		int num = 0;
 		
 		MissileAPI missile = (MissileAPI) engine.spawnProjectile(
 				ship, weapon, getWeaponId(), 
@@ -280,7 +273,7 @@ public class TSOT_Destroyer extends BaseShipSystemScript implements DroneStrikeS
 		return 1;
 	}
 	public List<ShipAPI> getDrones(ShipAPI ship){
-		List<ShipAPI> drones=new ArrayList();
+		List<ShipAPI> drones=new ArrayList<ShipAPI>();
 		drones.add(ship);
 		return  drones;
 	}
