@@ -1,3 +1,6 @@
 com
 */test/*.png
 build
+*.jar
+libs
+*.lnk

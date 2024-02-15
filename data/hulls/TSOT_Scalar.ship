@@ -1,168 +1,128 @@
 {
-    "bounds": [
-        54,
-        8,
-        54,
-        -8,
-        40,
-        -15,
-        19,
-        -12,
-        14,
-        -24,
-        2,
-        -21,
-        -8,
-        -15,
-        -33,
-        -15,
-        -39,
-        0,
-        -33,
-        16,
-        -7,
-        15,
-        2,
-        22,
-        14,
-        24,
-        19,
-        14,
-        43,
-        15,
-        44,
-        10
-    ],
-    "center": [
-        26,
-        42
-    ],
-    "collisionRadius": 80,
-    "coversColor": "",
-    "engineSlots": [
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -36,
-                12
-            ],
-            "style": "HIGH_TECH",
-            "width": 16
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -40,
-                0
-            ],
-            "style": "HIGH_TECH",
-            "width": 16
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -36,
-                -11
-            ],
-            "style": "HIGH_TECH",
-            "width": 16
-        }
-    ],
-    "height": 96,
-    "hullId": "TSOT_Scalar",
-    "hullName": "Scalar",
-    "hullSize": "FRIGATE",
-    "shieldCenter": [
-        7,
-        0
-    ],
-    "builtInMods": [
-        "TSOT_quantized_hull",
-        "TSOT_weapon_power"
-    ],
-    "shieldRadius": 70,
-    "spriteName": "graphics/ships/TSOT_Scalar.png",
-    "style": "HIGH_TECH",
-    "viewOffset": 50,
-    "weaponSlots": [
-        {
-            "angle": 0,
-            "arc": 150,
-            "id": "WS 001",
-            "locations": [
-                11,
-                0
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 90,
-            "arc": 200,
-            "id": "WS 002",
-            "locations": [
-                -13,
-                12
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": -90,
-            "arc": 200,
-            "id": "WS 003",
-            "locations": [
-                -13,
-                -11
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 0,
-            "arc": 5,
-            "id": "WS 004",
-            "locations": [
-                45,
-                0
-            ],
-            "mount": "HARDPOINT",
-            "size": "MEDIUM",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 0,
-            "arc": 5,
-            "id": "WS 005",
-            "locations": [
-                12,
-                20
-            ],
-            "mount": "HARDPOINT",
-            "size": "SMALL",
-            "type": "MISSILE"
-        },
-        {
-            "angle": 0,
-            "arc": 5,
-            "id": "WS 006",
-            "locations": [
-                11,
-                -19
-            ],
-            "mount": "HARDPOINT",
-            "size": "SMALL",
-            "type": "MISSILE"
-        }
-    ],
-    "width": 52
+  "hullName": "Scalar",
+  "hullId": "TSOT_Scalar",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/TSOT_Scalar.png",
+  "style": "OMEGA",
+  "height": 108,
+  "width": 54,
+  "center": [27, 54],
+  "collisionRadius": 55,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 58.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "TSOT_quantized_hull",
+    "TSOT_weapon_power",
+    "TSOT_quantized_core"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-42, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-21, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [4, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [25.5, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [41, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-48.5, -9.5],
+      "length": 14.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-48.5, 9.5],
+      "length": 14.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-51, -4],
+      "length": 38,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-51, 4],
+      "length": 38,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "OMEGA"
+    },
+    {
+      "location": [17, -16],
+      "length": 14.984438,
+      "width": 4.885327,
+      "angle": -153.5,
+      "contrailSize": 4.885327,
+      "style": "OMEGA"
+    },
+    {
+      "location": [17, 16],
+      "length": 14.984438,
+      "width": 4.885327,
+      "angle": 153.5,
+      "contrailSize": 4.885327,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -54, 5,
+    -46, 14,
+    -19.5, 18,
+    38, 14,
+    51, 4,
+    51, -4,
+    38, -14,
+    -19.5, -18,
+    -46, -14,
+    -54, -5
+  ]
 }

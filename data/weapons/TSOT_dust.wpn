@@ -1,8 +1,7 @@
 {
 	"id":"TSOT_dust",
 	"specClass":"projectile",
-	"type": "BALLISTIC",
-  	"mountTypeOverride": "HYBRID",
+  	"type": "ENERGY",
 	"size":"SMALL",
 	"displayArcRadius":250,
 	"turretSprite":"graphics/weapons/vulcan_cannon_turret_base.png",

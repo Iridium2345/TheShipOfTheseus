@@ -1,31 +1,40 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
-无畏者协议,TSOT_agreement_fearless,3,,,"no_build_in",TSOT协议,,,,,10,20,30,50,data.hullmods.AgreementFearless,"每个耗散通道增加 %s 最高航速
+无畏者协议,TSOT_agreement_fearless,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementFearless,"每个耗散通道增加 %s 最高航速
 每个寄存器增加 %s%% 武器射速 并减少 %s%% 武器幅能 ",TSOT协议,,graphics/hullmods/unstable_injector.png
 
-守护者协议,TSOT_agreement_guardian,3,,,"no_build_in",TSOT协议,,,,,10,20,30,50,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
+守护者协议,TSOT_agreement_guardian,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
 每个寄存器增加 %s%% 减伤
 降低 %s%% 最高航速",TSOT协议,,graphics/hullmods/unstable_injector.png
 
-构建者协议,TSOT_agreement_builder,3,,,"no_build_in",TSOT协议,,,,,10,20,30,50,data.hullmods.AgreementBuilder,"每个耗散通道增加 %s%% 整备速度
+构建者协议,TSOT_agreement_builder,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementBuilder,"每个耗散通道增加 %s%% 整备速度
 每个寄存器增加 %s%% 整备速度
 根据舰船级别增加 1~2 个飞行甲板
 降低 %s%% 舰体结构",TSOT协议,,graphics/hullmods/unstable_injector.png
 
-观察者协议,TSOT_agreement_observer,3,,,"no_build_in",TSOT协议,,,,,10,20,30,50,data.hullmods.AgreementObserver,"每个耗散通道增加 %s%% 武器射程
+观察者协议,TSOT_agreement_observer,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementObserver,"每个耗散通道增加 %s%% 武器射程
 每个寄存器增加 %s 武器射程
 降低 %s%% 幅能耗散",TSOT协议,,graphics/hullmods/unstable_injector.png
 
 协议:初心,TSOT_agreement_beginner,3,,,,TSOT协议,,,TRUE,,0,0,0,0,data.hullmods.AgreementBeginner,"每个耗散通道增加 %s%% 幅能耗散
 每个寄存器增加 %s%% 幅能容量",TSOT协议,,graphics/hullmods/unstable_injector.png
 
+协议:远行,TSOT_agreement_travel,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementTravel,"每个耗散通道和寄存器增加 %s人员容量和 %s 突袭强度,不超过陆战队数量
+武器效率 -50%%",TSOT协议,,graphics/hullmods/unstable_injector.png
+
+协议:运载,TSOT_agreement_cargo,3,,,"no_build_in,TSOT_agreement",TSOT协议,,,,,5,10,20,40,data.hullmods.AgreementCargo,"每个耗散通道和寄存器增加 %s 货舱容量 和 %s 燃料容量
+武器效率 -50%%",TSOT协议,,graphics/hullmods/unstable_injector.png
+
+量子定位核心,TSOT_quantized_core,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.QuantizedCore,"增加 %s%% 攻击范围",,,graphics/hullmods/TSOT_quantized_core.png
+
 量子化舰体,TSOT_quantized_hull,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.QuantizedHull,"每秒恢复 %s%% 结构
 结构增加 %s%%
 受到的破片伤害减少 %s%%
 受到的EMP伤害减少 %s%%
-根据当前损失结构获得减伤,最高 %s%%",TSOT协议,,graphics/hullmods/unstable_injector.png
+根据当前损失结构获得减伤,最高 %s%%",,,graphics/hullmods/unstable_injector.png
 
-武器效率模块,TSOT_weapon_power,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.WeaponPower,"每额外 1%% 的武器效率提供:
+武器效率模块,TSOT_weapon_power,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.WeaponPower,"每个使用在武器上的装配点提供 %s%% 武器效率
+每额外 %s%% 的武器效率提供:
 %s%% 的 武器射速
 %s%% 的 武器伤害
 但武器的幅能产出增加 %s%%  
-基础为 %s%%",TSOT协议,,graphics/hullmods/unstable_injector.png
+基础为 %s %%",,,graphics/hullmods/unstable_injector.png

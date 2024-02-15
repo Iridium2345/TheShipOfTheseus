@@ -1,4 +1,0 @@
-
-协议:突袭,TSOT_agreement_raider,3,,,,,,,True,,14,28,42,70,data.hullmods.AgreementFearless,"每个空闲装配点增加 %s 突袭强度,不超过陆战队数量",TSOT协议,,graphics/hullmods/unstable_injector.png
-
-协议:运载,TSOT_agreement_cargo,3,,,,,,,True,,14,28,42,70,data.hullmods.AgreementFearless,"每个空闲装配点增加 %s 货舱容量 和 %s 燃料容量",TSOT协议,,graphics/hullmods/unstable_injector.png

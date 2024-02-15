@@ -1,7 +1,7 @@
 {
     "id": "TSOT_QuantumTunneling",
     "type": "ENGINE_MOD",
-    "aiType": "BURN_DRIVE_TOGGLE",
+    "aiType": "MANEUVERING_JETS",
 
     "statsScript": "data.scripts.system.TSOT_QuantumTunneling",
 
@@ -25,10 +25,10 @@
     "outOfUsesSound": "gun_out_of_ammo",
 
     "aiHints": {
-        "activeSpeedIncrease": 100,
+        "activeSpeedIncrease": 150,
         #not right since it 's ship-dependent, but hopefully close enough
         "burstMovementPotential": 0,
-        "averageSpeedMult": 1.95
+        "averageSpeedMult": 2.95
     }
 
 }

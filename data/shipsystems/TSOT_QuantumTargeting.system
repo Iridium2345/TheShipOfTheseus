@@ -1,9 +1,8 @@
 {
     "id":"TSOT_QuantumTargeting",
 	"type":"ENGINE_MOD",
-	"aiType":"BURN_DRIVE_TOGGLE",
-	#"aiType":"CUSTOM",
-	#"aiScript":"data.scripts.system.ai.TSOT_QuantumTargetingAI",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.system.ai.TSOT_QuantumTargetingAI",
 	
     "statsScript":"data.scripts.system.TSOT_QuantumTargeting",
     "canNotCauseOverload":true,

@@ -1,249 +1,180 @@
 {
-    "bounds": [
-        44,
-        51,
-        48,
-        21,
-        73,
-        0,
-        49,
-        -21,
-        43,
-        -47,
-        -7,
-        -62,
-        -40,
-        -47,
-        -55,
-        -24,
-        -55,
-        25,
-        -43,
-        46,
-        -6,
-        62
-    ],
-    "center": [
-        67,
-        63
-    ],
-    "collisionRadius": 110,
-    "coversColor": "255,255,255,255",
-    "engineSlots": [
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -48,
-                40
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -49,
-                -40
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 32,
-            "location": [
-                -60,
-                23
-            ],
-            "style": "HIGH_TECH",
-            "width": 8
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 32,
-            "location": [
-                -59,
-                16
-            ],
-            "style": "HIGH_TECH",
-            "width": 8
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 32,
-            "location": [
-                -59,
-                -15
-            ],
-            "style": "HIGH_TECH",
-            "width": 8
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 32,
-            "location": [
-                -60,
-                -22
-            ],
-            "style": "HIGH_TECH",
-            "width": 8
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -58,
-                5
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -58,
-                -4
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        }
-    ],
-    "height": 138,
-    "hullId": "TSOT_Vector",
-    "hullName": "TSOT_Vector_Standard",
-    "hullSize": "DESTROYER",
-    "builtInMods": [
-        "TSOT_quantized_hull",
-        "TSOT_weapon_power"
-    ],
-    "shieldCenter": [
-        0,
-        0
-    ],
-    "shieldRadius": 110,
-    "spriteName": "graphics/ships/TSOT_Vector.png",
-    "style": "HIGH_TECH",
-    "viewOffset": 0,
-    "weaponSlots": [
-        {
-            "angle": 120,
-            "arc": 210,
-            "id": "WS 001",
-            "locations": [
-                -18,
-                49
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 60,
-            "arc": 210,
-            "id": "WS 002",
-            "locations": [
-                19,
-                47
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": -60,
-            "arc": 210,
-            "id": "WS 003",
-            "locations": [
-                19,
-                -47
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 240,
-            "arc": 210,
-            "id": "WS 004",
-            "locations": [
-                -18,
-                -49
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 180,
-            "arc": 150,
-            "id": "WS 005",
-            "locations": [
-                -28,
-                0
-            ],
-            "mount": "TURRET",
-            "size": "SMALL",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 45,
-            "arc": 150,
-            "id": "WS 006",
-            "locations": [
-                0,
-                25
-            ],
-            "mount": "TURRET",
-            "size": "MEDIUM",
-            "type": "ENERGY"
-        },
-        {
-            "angle": -45,
-            "arc": 150,
-            "id": "WS 007",
-            "locations": [
-                0,
-                -25
-            ],
-            "mount": "TURRET",
-            "size": "MEDIUM",
-            "type": "ENERGY"
-        },
-        {
-            "angle": 0,
-            "arc": 5,
-            "id": "WS 008",
-            "locations": [
-                46,
-                30
-            ],
-            "mount": "HARDPOINT",
-            "size": "SMALL",
-            "type": "UNIVERSAL"
-        },
-        {
-            "angle": 0,
-            "arc": 5,
-            "id": "WS 009",
-            "locations": [
-                46,
-                -30
-            ],
-            "mount": "HARDPOINT",
-            "size": "SMALL",
-            "type": "UNIVERSAL"
-        }
-    ],
-    "width": 134
+  "hullName": "Vector",
+  "hullId": "TSOT_Vector",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/TSOT_Vector.png",
+  "style": "OMEGA",
+  "height": 180,
+  "width": 90,
+  "center": [45, 90],
+  "collisionRadius": 88.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 92,
+  "viewOffset": 0,
+  "builtInMods": [
+    "TSOT_quantized_hull",
+    "TSOT_weapon_power",
+    "TSOT_quantized_core"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-48, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-72, 0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [55, 0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [27.5, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [73, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": -90,
+      "locations": [3, -9.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": 90,
+      "locations": [3, 9.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": -90,
+      "locations": [-21, -9.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": 90,
+      "locations": [-21, 9.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-78, -9.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-78, 9.5],
+      "length": 48,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-63, -15],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-63, 15],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [43, -13.5],
+      "length": 30,
+      "width": 10,
+      "angle": -150.5,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [43, 13.5],
+      "length": 30,
+      "width": 10,
+      "angle": 150.5,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [86, -4.5],
+      "length": 30,
+      "width": 10,
+      "angle": -142,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [86, 4.5],
+      "length": 30,
+      "width": 10,
+      "angle": 142,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -87, 4.5,
+    -67.5, 15.5,
+    -10, 21.5,
+    55.5, 17.5,
+    87.5, 4.5,
+    87.5, -4.5,
+    55.5, -17.5,
+    -10, -21.5,
+    -67.5, -15.5,
+    -87, -4.5
+  ]
 }
