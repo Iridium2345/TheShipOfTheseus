@@ -1,0 +1,61 @@
+{
+  "variantId": "TSOT_Infinite_cargo",
+  "hullId": "TSOT_Infinite",
+  "displayName": "运载",
+  "goalVariant": false,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["TSOT_agreement_cargo"],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "TSOT_LARGE",
+        "WS0002": "TSOT_LARGE",
+        "WS0003": "TSOT_LARGE",
+        "WS0004": "TSOT_LARGE",
+        "WS0005": "TSOT_LARGE",
+        "WS0006": "TSOT_LARGE"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "TSOT_MEDIUM",
+        "WS0009": "TSOT_MEDIUM",
+        "WS0010": "TSOT_MEDIUM",
+        "WS0011": "TSOT_MEDIUM"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "TSOT_MEDIUM"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "TSOT_dust",
+        "WS0013": "TSOT_dust",
+        "WS0014": "TSOT_dust",
+        "WS0015": "TSOT_dust",
+        "WS0016": "TSOT_dust",
+        "WS0017": "TSOT_dust",
+        "WS0018": "TSOT_dust",
+        "WS0019": "TSOT_dust"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "TSOT_Normal_wing",
+    "TSOT_Normal_wing"
+  ]
+}

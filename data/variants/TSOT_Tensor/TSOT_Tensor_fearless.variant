@@ -1,0 +1,47 @@
+{
+  "variantId": "TSOT_Tensor_fearless",
+  "hullId": "TSOT_Tensor",
+  "displayName": "无畏",
+  "goalVariant": false,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["TSOT_agreement_fearless"],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "TSOT_LARGE",
+        "WS0002": "TSOT_LARGE",
+        "WS0003": "TSOT_LARGE",
+        "WS0004": "TSOT_LARGE"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "TSOT_MEDIUM",
+        "WS0006": "TSOT_MEDIUM",
+        "WS0007": "TSOT_MEDIUM",
+        "WS0008": "TSOT_MEDIUM"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "TSOT_dust",
+        "WS0010": "TSOT_dust",
+        "WS0011": "TSOT_dust",
+        "WS0012": "TSOT_dust",
+        "WS0013": "TSOT_dust",
+        "WS0014": "TSOT_dust"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

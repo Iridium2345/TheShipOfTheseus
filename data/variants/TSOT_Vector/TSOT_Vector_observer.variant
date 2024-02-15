@@ -1,0 +1,42 @@
+{
+  "variantId": "TSOT_Vector_observer",
+  "hullId": "TSOT_Vector",
+  "displayName": "观察",
+  "goalVariant": false,
+  "fluxCapacitors": 20,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["TSOT_agreement_observer"],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "TSOT_MEDIUM",
+        "WS0003": "TSOT_MEDIUM",
+        "WS0004": "TSOT_MEDIUM"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "TSOT_SMALL",
+        "WS0005": "TSOT_SMALL"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "TSOT_dust",
+        "WS0007": "TSOT_dust",
+        "WS0008": "TSOT_dust",
+        "WS0009": "TSOT_dust"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

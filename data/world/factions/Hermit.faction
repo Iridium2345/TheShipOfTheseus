@@ -1,0 +1,177 @@
+{
+	id:"TSOT_Hermit",
+	"displayName":"隐者",
+	"displayNameWithArticle":"隐者",
+	"displayNameLong":"隐者",
+	"displayNameLongWithArticle":"隐者",
+	
+	"logo":"graphics/factions/ai_remnant.png",
+	"crest":"graphics/factions/crest_ai_remnant.png",
+	"shipNamePrefix":"TSOT",
+	
+	"color":[235,20,235,255],
+	"baseUIColor":[235,100,235,255],
+	
+	"showInIntelTab":true,
+	
+	"shipNameSources":{
+		"OTHER":1,
+	},
+	"names":{
+		"DERELICT_DRONE":1,
+	},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+			"TSOT_ship_bp":1,
+			"base_bp":0
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["TSOT_ship_bp"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp","TSOT_ship_bp","heg_aux_bp"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":["TSOT_ship_bp"],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["TSOT_LPC_bp"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":["TSOT_LPC_bp"],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["TSOT_weapon_bp"],
+		"weapons":[
+		],
+	},
+	"priorityWeapons":{
+		"tags":["TSOT_weapon_bp"],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["standard","TSOT_agreement"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":1,
+		"phaseShips":0,
+		
+		"officerQuality":1,
+		"shipQuality":3,
+		"numShips":3,
+		
+		"shipSize":4,
+		
+		"aggression":5, # doesn't matter since automated ships are super aggressive regardless
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0,
+
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+		],
+	},
+	#"shipRoles":{
+	#},
+	"illegalCommodities":[
+		"drugs"
+	],
+	"music":{
+		"encounter_hostile":"music_tritach_encounter_hostile",
+	},	
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/characters/omega.png",
+		],
+		"standard_female":[
+			"graphics/portraits/characters/omega.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+			"spaceCommander":{"name":"践行者"},
+		},
+		"posts":{
+			"patrolCommander":{"name":"守望者"},
+			"fleetCommander":{"name":"开拓者"},
+			"baseCommander":{"name":"探求者"},
+		},
+	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"postsNoBounties":false,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		"noAICoresFromAutomatedDefenses":true,
+		"officersOnAutomatedDefenses":true,
+	},	
+	"fleetTypeNames":{
+		"trade":"币-传递",
+		"tradeLiner":"币-访客",
+		"tradeSmuggler":"币-无相",
+		"smallTrader":"币-运载",
+		
+		"patrolSmall":"杖-监察",
+		"patrolMedium":"杖-守护",
+		"patrolLarge":"杖-守望",
+		"inspectionFleet":"杖-观察",
+
+		"taskForce":"剑-歼灭",
+        "mercPatrol":"剑-毁灭",
+        "mercArmada":"剑-破灭",
+
+		"foodReliefFleet":"杯-护佑",
+	},
+},

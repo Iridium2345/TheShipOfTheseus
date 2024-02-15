@@ -1,0 +1,33 @@
+{
+  "variantId": "TSOT_Scalar_cargo",
+  "hullId": "TSOT_Scalar",
+  "displayName": "运载",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["TSOT_agreement_cargo"],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        
+        "WS0002": "TSOT_MEDIUM",
+        "WS0003": "TSOT_MEDIUM"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "TSOT_dust",
+        "WS0004": "TSOT_dust",
+        "WS0005": "TSOT_dust"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
