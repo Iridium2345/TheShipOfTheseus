@@ -2,7 +2,7 @@
 	"id":"TSOT_Destroyer_proj",
 	"specClass":"missile",	
 	"missileType":"MISSILE",
-	"onHitEffect":"com.fs.starfarer.api.impl.combat.MoteOnHitEffect",
+	"onHitEffect":"data.scripts.weapon.DestroyerOnHit",
 	"sprite":"graphics/ships/drones/drone_terminatorB.png",
 	"size":[18,21],	
 	"center":[9,8],

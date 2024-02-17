@@ -1,0 +1,192 @@
+{
+    "combatSmallForSmallFleet": {
+        "TSOT_Matrix_fearless": 1,
+        "TSOT_Matrix_guardian": 1,
+        "TSOT_Matrix_observer": 1,
+
+
+        "TSOT_Vector_fearless": 4,
+        "TSOT_Vector_guardian": 4,
+        "TSOT_Vector_observer": 4,
+
+
+        "TSOT_Scalar_fearless": 5,
+        "TSOT_Scalar_guardian": 5,
+        "TSOT_Scalar_observer": 5
+    },
+    "combatSmall": {
+        "TSOT_Matrix_fearless": 1,
+        "TSOT_Matrix_guardian": 1,
+        "TSOT_Matrix_observer": 1,
+
+        "TSOT_Vector_fearless": 4,
+        "TSOT_Vector_guardian": 4,
+        "TSOT_Vector_observer": 4,
+
+        "TSOT_Scalar_fearless": 5,
+        "TSOT_Scalar_guardian": 5,
+        "TSOT_Scalar_observer": 5
+    },
+    "combatMedium": {
+        "TSOT_Tensor_fearless": 1,
+        "TSOT_Tensor_guardian": 1,
+        "TSOT_Tensor_observer": 1,
+
+        "TSOT_Matrix_fearless": 6,
+        "TSOT_Matrix_guardian": 6,
+        "TSOT_Matrix_observer": 6,
+
+        "TSOT_Vector_fearless": 10,
+        "TSOT_Vector_guardian": 10,
+        "TSOT_Vector_observer": 10,
+
+        "TSOT_Scalar_fearless": 10,
+        "TSOT_Scalar_guardian": 10,
+        "TSOT_Scalar_observer": 10
+    },
+    "combatLarge": {
+        "TSOT_Tensor_fearless": 3,
+        "TSOT_Tensor_guardian": 3,
+        "TSOT_Tensor_observer": 3,
+
+        "TSOT_Matrix_fearless": 6,
+        "TSOT_Matrix_guardian": 6,
+        "TSOT_Matrix_observer": 6,
+
+        "TSOT_Vector_fearless": 10,
+        "TSOT_Vector_guardian": 10,
+        "TSOT_Vector_observer": 10,
+
+        "TSOT_Scalar_fearless": 10,
+        "TSOT_Scalar_guardian": 10,
+        "TSOT_Scalar_observer": 10
+    },
+    "combatCapital": {
+
+        "TSOT_Infinite_fearless": 1,
+        "TSOT_Infinite_guardian": 1,
+        "TSOT_Infinite_observer": 1,
+
+        "TSOT_Tensor_builder": 3,
+        "TSOT_Tensor_fearless": 3,
+        "TSOT_Tensor_guardian": 3,
+        "TSOT_Tensor_observer": 3,
+
+        "TSOT_Matrix_builder": 9,
+        "TSOT_Matrix_fearless": 9,
+        "TSOT_Matrix_guardian": 9,
+        "TSOT_Matrix_observer": 9,
+
+        "TSOT_Vector_builder": 15,
+        "TSOT_Vector_fearless": 15,
+        "TSOT_Vector_guardian": 15,
+        "TSOT_Vector_observer": 15,
+
+        "TSOT_Scalar_builder": 12,
+        "TSOT_Scalar_fearless": 12,
+        "TSOT_Scalar_guardian": 12,
+        "TSOT_Scalar_observer": 12
+    },
+    "combatFreighterSmall": {
+        "TSOT_Vector_travel": 20,
+        "TSOT_Vector_cargo": 20,
+        "TSOT_Scalar_cargo": 15,
+        "TSOT_Scalar_travel": 15
+    },
+    "combatFreighterMedium": {
+        "TSOT_Matrix_cargo": 10,
+        "TSOT_Matrix_travel": 10,
+        "fallback": { "combatFreighterSmall": 1 }
+    },
+    "combatFreighterLarge": {
+        "TSOT_Infinite_cargo": 4,
+        "TSOT_Infinite_travel": 4,
+        "TSOT_Manifold_travel": 4,
+        "TSOT_Manifold_cargo": 4,
+        "TSOT_Tensor_travel": 6,
+        "TSOT_Tensor_cargo": 6,
+        "fallback": { "combatFreighterSmall": 1 },
+        "fallback2": { "combatFreighterMedium": 1 }
+    },
+    "civilianRandom": {
+        "fallback": { "combatFreighterMedium": 1 }
+    },
+    "carrierSmall": {
+        "TSOT_Scalar_builder": 5,
+        "TSOT_Vector_builder": 4,
+        "TSOT_Matrix_builder": 1
+    },
+    "carrierMedium": {
+        "TSOT_Matrix_builder": 3,
+        "fallback": { "carrierSmall": 1 }
+    },
+    "carrierLarge": {
+        "TSOT_Tensor_builder": 2,
+        "TSOT_Infinite_builder": 2,
+        "TSOT_Manifold_builder": 6,
+        "TSOT_Manifold_fearless": 4,
+        "TSOT_Manifold_guardian": 4,
+        "TSOT_Manifold_observer": 4,
+        "fallback": { "carrierMedium": 1 },
+        "fallback2": { "carrierSmall": 1 }
+    },
+    "freighterSmall": {
+        "TSOT_Vector_cargo": 20,
+        "TSOT_Scalar_cargo": 15
+    },
+    "freighterMedium": {
+        "TSOT_Matrix_cargo": 10,
+        "fallback": { "freighterSmall": 1 }
+    },
+    "freighterLarge": {
+        "TSOT_Infinite_cargo": 2,
+        "TSOT_Manifold_cargo": 2,
+        "TSOT_Tensor_cargo": 4,
+        "fallback": { "freighterMedium": 1 },
+        "fallback2": { "freighterSmall": 1 }
+    },
+    "tankerSmall": {
+        "fallback": { "freighterSmall": 1 }
+    },
+    "tankerMedium": {
+        "fallback": { "tankerSmall": 1 },
+        "fallback2": { "freighterMedium": 1 }
+    },
+    "tankerLarge": {
+        "TSOT_Infinite_cargo": 2,
+        "TSOT_Manifold_cargo": 2,
+        "TSOT_Tensor_cargo": 4,
+        "fallback": { "tankerMedium": 1 },
+        "fallback2": { "tankerSmall": 1 }
+    },
+    "personnelSmall": {
+        "TSOT_Vector_travel": 5,
+        "TSOT_Scalar_travel": 5
+    },
+    "personnelMedium": {
+        "TSOT_Matrix_travel": 3,
+        "fallback": { "personnelSmall": 1 }
+    },
+    "personnelLarge": {
+        "TSOT_Tensor_travel": 2,
+        "TSOT_Manifold_travel": 1,
+        "TSOT_Infinite_travel": 1,
+        "fallback": { "personnelMedium": 1 },
+        "fallback2": { "personnelSmall": 1 }
+    },
+    "linerSmall": {
+        "TSOT_Vector_travel": 5,
+        "TSOT_Scalar_travel": 5
+    },
+    "linerMedium": {
+        "TSOT_Matrix_travel": 3,
+        "fallback": { "linerSmall": 1 }
+    },
+    "linerLarge": {
+        "TSOT_Tensor_travel": 2,
+        "TSOT_Manifold_travel": 1,
+        "TSOT_Infinite_travel": 1,
+        "fallback": { "linerMedium": 1 },
+        "fallback2": { "linerSmall": 1 }
+    }
+}

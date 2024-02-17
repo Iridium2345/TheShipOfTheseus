@@ -30,6 +30,9 @@ def getSrcList(path:pathlib.Path):
 def getClassList(path:pathlib.Path):
     return getList(path,".class")
 
+def getVariantList(path:pathlib.Path):
+    return getList(path,".variant")
+
 os.system(BuildCommand.format(
         build_path=BuildPath,
         class_path=" ".join(ClassPath),
@@ -42,3 +45,8 @@ os.system(JarCommand.format(
         jar_name=JarName,
         class_list=" ".join([str(i.relative_to(path.joinpath(BuildPath))) for i in getClassList(path.joinpath(BuildPath))])
     ))
+
+os.chdir(str(path))
+
+with open("data/campaign/sim_opponents.csv","w",encoding="utf-8") as f:
+    f.write("variant id\n"+"\n".join([i.stem for i in getVariantList(path)]))

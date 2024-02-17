@@ -22,6 +22,8 @@ public class TSOT_QuickRebuild extends BaseShipSystemScript{
     
     private static final float REPAIR = 0.7f;
 
+    private static final float FLUX = 1.5f;
+
     private static final float MIN_USEABLE_HITPOINT=0.7f;
     
     private static final float REPAIR_RATE_BONUS = 95f;
@@ -89,7 +91,7 @@ public class TSOT_QuickRebuild extends BaseShipSystemScript{
 
         FluxTrackerAPI tracker=ship.getFluxTracker();
         tracker.setCurrFlux(Math.min(
-            Math.max(0f,ship.getCurrFlux() - interval.getIntervalDuration() * REPAIR*0.5f * (ship.getMaxHitpoints()-ship.getHitpoints())/stats.getTimeMult().getModifiedValue()),
+            Math.max(0f,ship.getCurrFlux() - interval.getIntervalDuration() * REPAIR * FLUX * (ship.getMaxHitpoints()-ship.getHitpoints())/stats.getTimeMult().getModifiedValue()),
             ship.getMaxFlux()
             )
         );
