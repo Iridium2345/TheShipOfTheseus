@@ -117,7 +117,7 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
 					"重构中", 
 					String.format("修复速率: %d 额外耗散: %d",
                     (int)(REPAIR * (playerShip.getMaxHitpoints()-playerShip.getHitpoints())),
-                    (int)(REPAIR * 0.5 * (playerShip.getMaxHitpoints()-playerShip.getHitpoints()))
+                    (int)(REPAIR * FLUX * (playerShip.getMaxHitpoints()-playerShip.getHitpoints()))
                     ), 
                     true);
 	}
