@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Manifold_observer",
   "hullId": "TSOT_Manifold",
-  "displayName": "观察",
+  "displayName": "远眺",
   "goalVariant": false,
   "fluxCapacitors": 40,
   "fluxVents": 40,

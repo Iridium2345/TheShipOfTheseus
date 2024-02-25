@@ -2,7 +2,7 @@
     "id": "TSOT",
     "name": "The Ship Of Theseus",
     "author": "Iridum2345",
-    "version": "0.0.1 beta",
+    "version": "0.1.0 Alpha",
     "description": "Null",
     "gameVersion": "0.96a-RC10",
     "jars": ["jars/TheShipOfTheseus.jar"],

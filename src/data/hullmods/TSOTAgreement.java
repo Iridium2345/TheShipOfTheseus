@@ -23,22 +23,23 @@ public abstract class TSOTAgreement extends BaseHullMod {
 
     protected abstract String getDescriptionCapacitors(float numFluxCapacitors);
 
-    static Set<String> SubMods = new HashSet<String>();
+    public static Set<String> SubMods = new HashSet<String>();
+
+	protected float FluxVents;
+	protected float FluxCapacitors;
 
 	@Override
     public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (ship == null)return;
 		float FluxVents=(float)ship.getVariant().getNumFluxVents();
 		float FluxCapacitors=(float)ship.getVariant().getNumFluxCapacitors();
-		if (ship != null) {
-			tooltip.addPara(getDescriptionVents(FluxVents),color,10f);
-			tooltip.addPara(getDescriptionCapacitors(FluxCapacitors),color,10f);
-		} 
+		tooltip.addPara(getDescriptionVents(FluxVents),color,10f);
+		tooltip.addPara(getDescriptionCapacitors(FluxCapacitors),color,10f);
 	}
 
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		float FluxVents;
-		float FluxCapacitors;
+		
 		if(stats.getEntity() instanceof ShipAPI){
 			ShipAPI ship=(ShipAPI)stats.getEntity();
 			FluxVents=(float)ship.getVariant().getNumFluxVents();

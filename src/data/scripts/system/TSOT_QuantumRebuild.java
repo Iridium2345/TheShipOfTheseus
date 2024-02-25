@@ -18,11 +18,14 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
 	protected Object STATUSKEY3 = new Object();
 	protected Object STATUSKEY4 = new Object();
 
-    private static final IntervalUtil interval = new IntervalUtil(0.033f, 0.033f);
+    private static final IntervalUtil interval = new IntervalUtil(0.066f, 0.066f);
     
-    private static final float REPAIR = 0.1f;
+    protected float getRepairRate(){
+        return 0.1f;
+    }
 
-    private static final float FLUX = 1.2f;
+    private static final float FLUX = 3f;
+    private static final float SOFT2HARD = 0.2f;
 
     private static final float MIN_USEABLE_HITPOINT=0.7f;
     
@@ -69,32 +72,39 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
             actualId = actualId + "_" + ship.getId();
             player = ship == Global.getCombatEngine().getPlayerShip();
         } else return;
+        if(player)maintainStatus(ship, state, effectLevel);
         jitter(state,effectLevel,ship);
         if(!ship.isAlive())return;
-        if(player)maintainStatus(ship, state, effectLevel);
+        
+        interval.advance(Global.getCombatEngine().getElapsedInLastFrame());
+        if(!interval.intervalElapsed())return;
+
         if (engine.isPaused())return;
         if (state == State.COOLDOWN || state == State.IDLE) {
             unapply(stats, actualId);
             return;
         }
-
+        
         stats.getCombatEngineRepairTimeMult().modifyMult(id, 1f - REPAIR_RATE_BONUS * 0.01f);
 		stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f - REPAIR_RATE_BONUS * 0.01f);
         
         ship.setExtraAlphaMult(SHIP_ALPHA_MULT);
 		ship.setApplyExtraAlphaToEngines(true);
 
+        float increasedHitpoint = interval.getElapsed() * getRepairRate() * (ship.getMaxHitpoints()-ship.getHitpoints());
+
         ship.setHitpoints(Math.min(
-            ship.getHitpoints() + interval.getIntervalDuration() * REPAIR * (ship.getMaxHitpoints()-ship.getHitpoints())/stats.getTimeMult().getModifiedValue(),
+            ship.getHitpoints() + increasedHitpoint,
             ship.getMaxHitpoints()
             ));
 
         FluxTrackerAPI tracker=ship.getFluxTracker();
-        tracker.setCurrFlux(Math.min(
-            Math.max(0f,ship.getCurrFlux() - interval.getIntervalDuration() * REPAIR* FLUX * (ship.getMaxHitpoints()-ship.getHitpoints())/stats.getTimeMult().getModifiedValue()),
-            ship.getMaxFlux()
-            )
+        float decreasedFlux=Math.min(
+            tracker.getCurrFlux()-tracker.getHardFlux(),
+             FLUX * increasedHitpoint
         );
+        tracker.decreaseFlux(decreasedFlux);
+        tracker.increaseFlux(decreasedFlux*SOFT2HARD, true);
     }
     @Override
     public void unapply(MutableShipStatsAPI stats,String id){
@@ -115,10 +125,8 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
 		Global.getCombatEngine().maintainStatusForPlayerShip(STATUSKEY3,
 					cloak.getSpecAPI().getIconSpriteName(),
 					"重构中", 
-					String.format("修复速率: %d 额外耗散: %d",
-                    (int)(REPAIR * (playerShip.getMaxHitpoints()-playerShip.getHitpoints())),
-                    (int)(REPAIR * FLUX * (playerShip.getMaxHitpoints()-playerShip.getHitpoints()))
-                    ), 
+					String.format("幅能转换中... 修复速率: %.1f ",
+                    getRepairRate() * (playerShip.getMaxHitpoints()-playerShip.getHitpoints())), 
                     true);
 	}
 

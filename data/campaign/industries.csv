@@ -1,0 +1,3 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
+TSOT_Reverse_Spiral,逆位螺旋,15,600,,1,,,"industry,structure",,graphics/icons/industry/TSOT_Reverse_Spiral.png,data.industries.ReverseSpiral,"巨大的...建筑? 巨大的螺旋汲取蓝巨星星冕的能量和物质,转化为量子态的稳定物质",200,
+TSOT_Phase_Ring,相位环,15,600,,1,,,"industry,structure",,graphics/icons/industry/TSOT_Phase_Ring.png,data.industries.PhaseRing,"巨大的...建筑? 巨大的环状结构 将量子态的稳定物质高效率的转换成高纯度的工业原料,当然,也可以生产食品 ",201,

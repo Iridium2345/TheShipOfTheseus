@@ -39,7 +39,7 @@ public class DestroyerOnHit  implements OnHitEffectPlugin{
 				new Color(235,100,235,20), // particleColor
 				new Color(230,20,230,10)  // explosionColor
 			);
-		spec.setDamageType(DamageType.HIGH_EXPLOSIVE);
+		spec.setDamageType(DamageType.ENERGY);
 		spec.setUseDetailedExplosion(true);
         engine.spawnDamagingExplosion(spec,projectile.getSource(), point);
     }

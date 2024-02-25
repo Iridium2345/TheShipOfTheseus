@@ -1,0 +1,111 @@
+{
+  "hullName": "Infinite stern",
+  "hullId": "TSOT_Infinite_stern",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/TSOT_Infinite_stern.png",
+  "style": "LOW_TECH",
+  "height": 590,
+  "width": 153,
+  "center": [76.5, 295],
+  "collisionRadius": 295,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 303.5,
+  "viewOffset": -2,
+  "builtInMods": [
+    "TSOT_quantized_hull",
+    "TSOT_weapon_power",
+    "TSOT_quantized_core"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-126, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-178, 0]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-228, 0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -115,
+      "locations": [-85, -37.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": 115,
+      "locations": [-85, 37.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -142.5, -37,
+        -112, -29,
+        -111.5, -45.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -142, 36.5,
+        -110.5, 47.5,
+        -111.5, 30
+      ]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -293, 3,
+    -276, 19,
+    -206, 41.5,
+    -47.5, 73.5,
+    143.5, 64.5,
+    158.5, 48,
+    31.5, 34,
+    -64.5, 3,
+    -64.5, -3,
+    31.5, -34,
+    158.5, -48,
+    143.5, -64.5,
+    -47.5, -73.5,
+    -206, -41.5,
+    -276, -19,
+    -293, -3
+  ]
+}

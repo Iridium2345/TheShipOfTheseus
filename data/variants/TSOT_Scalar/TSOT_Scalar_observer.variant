@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Scalar_observer",
   "hullId": "TSOT_Scalar",
-  "displayName": "观察",
+  "displayName": "远眺",
   "goalVariant": false,
   "fluxCapacitors": 10,
   "fluxVents": 10,

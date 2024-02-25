@@ -1,0 +1,47 @@
+{
+  "variantId": "TSOT_Infinite_board_station",
+  "hullId": "TSOT_Infinite_board",
+  "displayName": "纵深",
+  "goalVariant": false,
+  "fluxCapacitors": 46,
+  "fluxVents": 46,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["TSOT_agreement_guardian"],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "TSOT_LARGE",
+        "WS0002": "TSOT_LARGE"
+      }
+    },{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "TSOT_dustx6",
+        "WS0004": "TSOT_dustx6",
+        "WS0007": "TSOT_dustx6",
+        "WS0008": "TSOT_dustx6",
+        "WS0011": "TSOT_dustx6",
+        "WS0012": "TSOT_dustx6",
+      }
+    },{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "TSOT_dust",
+        "WS0006": "TSOT_dust",
+        "WS0009": "TSOT_dust",
+        "WS0010": "TSOT_dust"
+      }
+    },
+  ],
+  "modules": [
+  ],
+  "wings": [
+    "TSOT_Normal_wing",
+    "TSOT_Normal_wing"
+  ]
+}

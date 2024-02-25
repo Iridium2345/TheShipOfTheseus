@@ -224,6 +224,60 @@
       "arc": 140,
       "angle": 80.5,
       "locations": [117, 28]
+    },
+    {
+      "id": "WS0020",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [128, 0]
+    },
+    {
+      "id": "WS0021",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-218, 0]
+    },
+    {
+      "id": "WS0022",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [0, -85]
+    },
+    {
+      "id": "WS0023",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [0, 85]
+    },
+    {
+      "id": "WS0024",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [0, -70]
+    },
+    {
+      "id": "WS0025",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [0, 70]
     }
   ],
   "engineSlots": [

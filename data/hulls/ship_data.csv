@@ -1,13 +1,17 @@
 name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
-法线,TSOT_Normal,TSOT,TSOT,TSOT_QuantumJump,1,750,20,150,,50,0,,335,500,400,90,270,200,PHASE,TSOT_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234501
-地平线,TSOT_Horizon,TSOT,TSOT,TSOT_Destroyer,1,1200,60,350,,50,0,,170,240,200,40,120,200,PHASE,TSOT_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234502
-天际线,TSOT_Skyline,TSOT,TSOT,TSOT_QuantumTunneling,1,1200,60,350,,50,0,,220,350,350,100,240,200,PHASE,TSOT_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234503
-环,TSOT_Ring,TSOT,TSOT,,1,800,60,350,,50,0,,300,240,200,120,360,30,PHASE,TSOT_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234504
+法线,TSOT_Normal,,忒修斯,TSOT_QuantumJump,,750,20,1000,,50,0,,335,500,400,90,270,200,PHASE,TSOT_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234501
+地平线,TSOT_Horizon,,忒修斯,TSOT_Destroyer,,1200,60,1350,,150,0,,170,240,200,40,120,200,PHASE,TSOT_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234502
+天际线,TSOT_Skyline,,忒修斯,TSOT_QuantumTunneling,,1200,60,2500,,150,0,,220,350,350,100,240,200,PHASE,TSOT_QuickRebuild,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234503
+环,TSOT_Ring,,忒修斯,,1,800,60,350,,50,0,,300,240,,120,360,30,PHASE,TSOT_QuickRebuild,160,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,234504
 
-标量,TSOT_Scalar,重型护卫舰,TSOT,TSOT_QuantumJump,5,1800,10,2250,1875,250,65,,150,130,100,60,120,200,PHASE,TSOT_QuickRebuild,150,0.4,0.7,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,8,10,,,,,,,,"TSOT_ship_bp,merc",,0.5,2,2,,234505
-矢量,TSOT_Vector,驱逐舰,TSOT,TSOT_QuantumTunneling,10,2400,10,6000,6667,500,115,,100,90,60,40,100,300,PHASE,TSOT_QuickRebuild,120,0.3,0.6,,,35,50,50,40,2,20,9,60000,5,20,300,0.25,18,18,,,,,,,,"TSOT_ship_bp,merc",,0.7,2,3,,234506
-矩阵,TSOT_Matrix,大巡洋舰,TSOT,TSOT_QuantumTargeting,15,5000,10,10000,11000,750,180,,60,40,30,15,20,1500,PHASE,TSOT_QuantumRebuild,210,0.4,0.8,,,200,300,150,150,4,38,8,125000,4,12,480,0.25,40,30,,,,,,,,"TSOT_ship_bp,merc",,0.5,2,4,,234507
-张量,TSOT_Tensor,战列巡洋舰,TSOT,TSOT_QuantumImpact,24,12000,10,20000,25000,1400,320,,80,70,50,12,16,3000,PHASE,TSOT_QuantumRebuild,90,0.4,0.6,,,0,0,150,300,10,30,9,250000,3,15,600,0.25,60,50,,,,,,,,"TSOT_ship_bp,merc",,0.5,2,4,,234508
-流形,TSOT_Manifold,航空战列舰,TSOT,TSOT_QuantumRaid,28,10000,10,15000,24000,1000,340,4,30,15,15,6,6,3500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,700,1500,300,300,15,20,7,350000,3,12,720,0.25,60,50,,,,,,,,"TSOT_ship_bp,merc",,0.4,2,4,,234509
-无量,TSOT_Infinite,无畏舰,TSOT,TSOT_ttk,28,8000,10,20000,30000,1800,430,2,45,25,25,25,15,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,750,1500,300,400,15,27,7,750000,3,12,3000,0.25,85,60,,,,,,,,"TSOT_ship_bp,merc",,0.4,2,4,,2345010
+标量,TSOT_Scalar,重型护卫舰,忒修斯,TSOT_QuantumJump,10,2400,10,3000,1875,250,65,,150,130,100,60,120,500,PHASE,TSOT_QuickRebuild,150,0.4,0.7,,,3,30,50,20,1,20,12,45000,8,5,180,0.25,8,10,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,4,6,,234505
+矢量,TSOT_Vector,驱逐舰,忒修斯,TSOT_QuantumTunneling,20,4000,10,6000,6667,450,115,,100,90,60,40,100,1000,PHASE,TSOT_QuickRebuild,120,0.3,0.6,,,3,50,50,40,2,20,11,135000,6,10,300,0.25,18,18,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,5,7,,234506
+矩阵,TSOT_Matrix,大巡洋舰,忒修斯,TSOT_QuantumTargeting,25,8000,10,10000,11000,850,180,,60,40,30,15,20,3500,PHASE,TSOT_QuantumRebuild,210,0.4,0.8,,,3,100,150,150,10,38,10,325000,4,15,480,0.25,35,30,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,6,8,,234507
+张量,TSOT_Tensor,战列巡洋舰,忒修斯,TSOT_QuantumImpact,35,12000,10,18000,25000,1200,320,,65,25,25,12,16,6500,PHASE,TSOT_QuantumRebuild,90,0.4,0.6,,,3,150,150,300,15,40,9,950000,2,20,600,0.25,55,55,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,8,10,,234508
+流形,TSOT_Manifold,航空战列舰,忒修斯,TSOT_QuantumRaid,35,10000,10,15000,24000,1000,340,4,35,25,25,12,16,6000,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,150,300,300,16,45,8,1250000,3,35,720,0.25,55,55,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,8,10,,234509
+无量,TSOT_Infinite,无畏舰,忒修斯,TSOT_ttk,45,16000,10,20000,30000,1400,430,2,45,25,25,25,15,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,200,300,400,14,25,9,3750000,2,30,3000,0.25,75,60,,,,,,,"UNBOARDABLE,SHIP_WITH_MODULES","TSOT_ship_bp,merc",,1,10,12,,2345010
+无量舰首模块,TSOT_Infinite_bow,,忒修斯,TSOT_ttk,40,12000,10,15000,30000,1000,325,2,0,0,0,0,0,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,200,300,400,14,25,9,3750000,2,30,3000,0.25,75,60,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,10,12,,2345010
+无量舰尾模块,TSOT_Infinite_stern,,忒修斯,TSOT_ttk,40,12000,10,15000,30000,1000,275,2,0,0,0,0,0,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,200,300,400,14,25,9,3750000,2,30,3000,0.25,75,60,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,10,12,,2345010
+无量武器模块,TSOT_Infinite_weapon,,忒修斯,TSOT_ttk,65,36000,10,12000,30000,800,210,1,0,0,0,0,0,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,200,300,400,14,25,9,3750000,2,30,3000,0.25,75,60,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,10,12,,2345010
+无量侧翼模块,TSOT_Infinite_board,,忒修斯,TSOT_ttk,85,18000,10,10000,30000,800,310,2,0,0,0,0,0,8500,PHASE,TSOT_QuantumRebuild,180,0.4,1,,,3,200,300,400,14,25,9,3750000,2,30,3000,0.25,75,60,,,,,,,"UNBOARDABLE","TSOT_ship_bp,merc",,1,10,12,,2345010
 

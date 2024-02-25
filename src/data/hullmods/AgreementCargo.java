@@ -11,15 +11,19 @@ public class AgreementCargo extends TSOTAgreement{
 	}
 
     public static final float CARGO = 30f;
-    public static final float FUEL = 30f;
+    public static final float FUEL = 35f;
+    public static final float WP_REDUCE=0.8f;
 
-    private float num = 0;
+    @Override
+    public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+        super.applyEffectsBeforeShipCreation(hullSize, stats, id);
+        stats.getCargoMod().modifyFlat(id, CARGO*FluxVents);
+        stats.getFuelMod().modifyFlat(id, FUEL*FluxCapacitors);
+    }
 
     @Override
     protected void increase(MutableShipStatsAPI stats, String id, float numFluxVents, float numFluxCapacitors) {
-        num=numFluxVents+numFluxCapacitors;
-        stats.getCargoMod().modifyFlat(id,CARGO*num);
-        stats.getFuelMod().modifyFlat(id,FUEL*num);
+        
     }
     
     @Override
@@ -28,24 +32,25 @@ public class AgreementCargo extends TSOTAgreement{
         if(ship==null)return;
         MutableStat wp = (ship.getCustomData().get(WeaponPower.KEY) instanceof MutableStat)?(MutableStat)ship.getCustomData().get(WeaponPower.KEY):null;
         if(wp==null)return;
-        wp.modifyMult(id,0.5f);
+        wp.modifyMult(id,1f-WP_REDUCE);
         ship.setCustomData(WeaponPower.KEY, wp);
     }
 
     @Override
     protected String getDescriptionVents(float numFluxVents) {
-        return  String.format("额外货舱容量 : %.0f",CARGO*num);
+        return  String.format("额外货舱容量 : %.0f",CARGO*numFluxVents);
     }
 
     @Override
     protected String getDescriptionCapacitors(float numFluxCapacitors) {
-        return  String.format("额外燃料容量 : %.0f",FUEL*num);
+        return  String.format("额外燃料容量 : %.0f",FUEL*numFluxCapacitors);
     }
 
     @Override
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if(index==0)return String.format("%.1f", CARGO);
-		if(index==1)return String.format("%.1f", FUEL);
+		if(index==0)return String.format("%.0f", CARGO);
+		if(index==1)return String.format("%.0f", FUEL);
+        if(index==2)return String.format("%.1f", WP_REDUCE);
 		return null;
 	}
 }

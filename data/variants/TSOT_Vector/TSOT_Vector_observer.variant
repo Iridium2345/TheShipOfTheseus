@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Vector_observer",
   "hullId": "TSOT_Vector",
-  "displayName": "观察",
+  "displayName": "远眺",
   "goalVariant": false,
   "fluxCapacitors": 20,
   "fluxVents": 19,

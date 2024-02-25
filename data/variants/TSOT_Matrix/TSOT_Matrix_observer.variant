@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Matrix_observer",
   "hullId": "TSOT_Matrix",
-  "displayName": "观察",
+  "displayName": "远眺",
   "goalVariant": false,
   "fluxCapacitors": 28,
   "fluxVents": 28,

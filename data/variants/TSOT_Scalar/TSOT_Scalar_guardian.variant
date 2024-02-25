@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Scalar_guardian",
   "hullId": "TSOT_Scalar",
-  "displayName": "守护",
+  "displayName": "护道",
   "goalVariant": false,
   "fluxCapacitors": 10,
   "fluxVents": 10,

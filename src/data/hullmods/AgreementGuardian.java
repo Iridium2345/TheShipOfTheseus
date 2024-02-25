@@ -5,8 +5,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class AgreementGuardian extends TSOTAgreement {
 	
-	private static final float HULL_BONUS=0.01f;
-	private static final float TOKEN_REDUCE=0.005f;
+	private static final float HULL_BONUS=0.015f;
+	private static final float TOKEN_REDUCE=0.0075f;
 	private static final float MAX_SPEED = 0.2f;
 
 	static{

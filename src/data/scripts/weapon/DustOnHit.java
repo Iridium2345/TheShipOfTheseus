@@ -22,15 +22,14 @@ public class DustOnHit implements OnHitEffectPlugin{
         boolean shieldHit,
         ApplyDamageResultAPI damageResult,
         CombatEngineAPI engine) {
-			if((target instanceof ShipAPI)&&(!((ShipAPI)target).isFighter()))return;
             engine.spawnEmpArc(
                 projectile.getSource(),
                 point,
                 projectile.getSource(),
                 target,
                 DamageType.FRAGMENTATION,
-                75f,
-                12f,
+                60f,
+                10f,
                 300f,
                 null,
                 30f,

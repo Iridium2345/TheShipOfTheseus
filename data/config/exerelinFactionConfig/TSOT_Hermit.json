@@ -1,0 +1,75 @@
+{
+    "playableFaction": true,
+    "corvusCompatible": true,
+
+    "rebelFleetSuffix": "探求者",
+
+    "directoryUseShortName": true,
+
+    "marketSpawnWeight": 0.5,
+
+    "startRelationships": {},
+    "maxRelationships": {},
+    "diplomacyPositiveChance": {},
+    "diplomacyNegativeChance": {},
+    "morality": "good",
+
+    "alignments": {
+        "corporate": 0,
+        "technocratic": 0,
+        "ideological": 0,
+        "diplomatic": 0,
+        "hierarchical": 0,
+        "militarist": 0
+    },
+
+    "diplomacyTraits": ["pacifist", "helps_allies", "stalwart", "lowprofile", "neutralist"],
+
+    "freeMarket": true,
+
+    "colonyExpeditionChance": 0.5,
+    "colonyTargetValuator": "exerelin.campaign.colony.IndustrialColonyTargetValuator",
+
+    "startShipsSolo": [
+        ["TSOT_Vector_cargo"]
+    ],
+    "startShipsCombatSmall": [
+        ["TSOT_Scalar_cargo", "TSOT_Scalar_fearless", "TSOT_Scalar_guardian"]
+    ],
+    "startShipsCombatLarge": [
+        ["TSOT_Vector_cargo", "TSOT_Vector_guardian", "TSOT_Vector_fearless"]
+    ],
+    "startShipsCarrierSmall": [
+        ["TSOT_Scalar_cargo", "TSOT_Vector_cargo", "TSOT_Scalar_builder"]
+    ],
+    "startShipsCarrierLarge": [
+        ["TSOT_Vector_builder"]
+    ],
+    "startShipsSuper": [
+        ["TSOT_Matrix_observer"],
+        ["TSOT_Manifold_builder"]
+    ],
+
+    "startSpecialItems": [
+        [
+            ["TSOT_LPC_bp_package", ""]
+        ]
+    ],
+
+    "defenceStations": [
+        { "ids": ["orbitalstation_high", "battlestation_high", "starfortress_high"] }
+    ],
+
+    "industrySeeds": [
+        { "id": "orbitalworks", "mult": 0.1 },
+        { "id": "lightindustry", "mult": 0.1 }
+    ],
+
+    "bonusSeeds": [
+        { "id": "nanoforge_corrupted", "count": 1 },
+        { "id": "aiCore_station", "count": 2, "mult": 0.2 },
+        { "id": "aiCore_military", "mult": 0.4 },
+        { "id": "aiCore_heavyindustry", "count": 1 },
+        { "id": "aiCore_any", "mult": 1.5 }
+    ],
+}

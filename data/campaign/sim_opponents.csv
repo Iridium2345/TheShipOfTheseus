@@ -27,6 +27,11 @@ TSOT_Scalar_fearless
 TSOT_Scalar_guardian
 TSOT_Scalar_observer
 TSOT_Scalar_travel
+TSOT_Infinite_board_guardian
+TSOT_Infinite_bow_guardian
+TSOT_Infinite_station
+TSOT_Infinite_stern_guardian
+TSOT_Infinite_weapon_guardian
 TSOT_Tensor_builder
 TSOT_Tensor_cargo
 TSOT_Tensor_fearless

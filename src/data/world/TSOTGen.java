@@ -3,19 +3,25 @@ package data.world;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.title.Object.M;
 
 public class TSOTGen {
     public void generate(SectorAPI sector) {
@@ -24,12 +30,40 @@ public class TSOTGen {
         system.getLocation().set(5000f,-5000f);
         PlanetAPI star = system.initStar("TSOT_Hermit",
         "star_blue_supergiant",
-        600f,
-        1200f);
+        800f,
+        600f);
         system.setLightColor(new Color(230, 200, 230));
 
-        system.addRingBand(star, "misc", "rings_dust0", 256f, 2, Color.gray, 400f, 1600f, 200f);
-        system.addRingBand(star, "misc", "rings_dust0", 256f, 3, Color.gray, 400f, 1800f, 200f);
+        system.addRingBand(star, "misc", "rings_dust0", 256f, 2, Color.gray, 400f, 1100f, 150f);
+        system.addRingBand(star, "misc", "rings_dust0", 256f, 3, Color.gray, 400f, 1400f, 100f);
+
+        List<String> CustomEntity = Arrays.asList(
+        "comm_relay",
+        "nav_buoy",
+        "sensor_array",
+        "inactive_gate"
+        );
+
+        for(int i=0;i<4;i++){
+                system.addCustomEntity("TSOS_SL_"+i,null,CustomEntity.get(i),"TSOT_Hermit").setCircularOrbitPointingDown(star, i*90, 1600, -120);
+        }
+        
+        CustomCampaignEntityAPI station_1 = system.addCustomEntity("TSOT_station_1", "研究站 - 星币", "TSOT_coronal_tap", "TSOT_Hermit");
+        station_1.setCircularOrbitPointingDown(star,0,2000,150);
+        station_1.getMemory().set("$usable", true);
+
+        CustomCampaignEntityAPI station_2 = system.addCustomEntity("TSOT_station_2", "研究站 - 圣杯", "TSOT_coronal_tap", "TSOT_Hermit");
+        station_2.setCircularOrbitPointingDown(star,90,2000,150);
+        station_2.getMemory().set("$usable", true);
+
+        CustomCampaignEntityAPI station_3 = system.addCustomEntity("TSOT_station_3", "研究站 - 权杖", "TSOT_coronal_tap", "TSOT_Hermit");
+        station_3.setCircularOrbitPointingDown(star,180,2000,150);
+        station_3.getMemory().set("$usable", true);
+
+        CustomCampaignEntityAPI station_4 = system.addCustomEntity("TSOT_station_4", "研究站 - 利剑", "TSOT_coronal_tap", "TSOT_Hermit");
+        station_4.setCircularOrbitPointingDown(star,270,2000,150);
+        station_4.getMemory().set("$usable", true);
+
         PlanetAPI planet = system.addPlanet("TSOT_IX",
                 star,
                 "IX",
@@ -38,33 +72,6 @@ public class TSOTGen {
                 240,
                 3600,
                 125);
-        
-        PlanetAPI moon1 = system.addPlanet("TSOT_IX_I",
-                planet,
-                "I - IX",
-                "barren",
-                125f,
-                66,
-                1060,
-                60);
-        
-        PlanetAPI moon2 = system.addPlanet("TSOT_IX_II",
-                planet,
-                "II - IX",
-                "barren",
-                125f,
-                60,
-                800,
-                64);
-        
-        PlanetAPI moon3 = system.addPlanet("TSOT_IX_III",
-                planet,
-                "III - IX",
-                "barren",
-                125f,
-                72,
-                550,
-                34);
         
         MarketAPI market1 = addMarketplace("TSOT_Hermit", planet, null,
                 "IX",
@@ -103,109 +110,154 @@ public class TSOTGen {
                 0.1f,
                 true,
                 true);
-                MarketAPI market2 = addMarketplace("TSOT_Hermit", moon1, null,
-                "I - IX",
-                6,
+        market1.getIndustry(Industries.HIGHCOMMAND).setAICoreId(Commodities.ALPHA_CORE);
+
+        MarketAPI market2 = addMarketplace("TSOT_Hermit", station_1, null,
+                "研究站 - 星币",
+                4,
                 new ArrayList<>(
                         Arrays.asList(
-                                Conditions.POPULATION_6
+                                Conditions.POPULATION_4,
+                                "TSOT_ResearchStation"
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
                                 Submarkets.SUBMARKET_OPEN,
-                                Submarkets.GENERIC_MILITARY,
                                 Submarkets.SUBMARKET_BLACK,
                                 Submarkets.SUBMARKET_STORAGE
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
-                                Industries.POPULATION,
                                 Industries.MEGAPORT,
-                                Industries.FARMING,
                                 Industries.STARFORTRESS_HIGH,
                                 Industries.HEAVYBATTERIES,
-                                Industries.HIGHCOMMAND,
-                                Industries.LIGHTINDUSTRY,
-                                Industries.ORBITALWORKS,
-                                Industries.WAYSTATION
+                                Industries.PATROLHQ,
+                                Industries.WAYSTATION,
+                                "TSOT_Reverse_Spiral",
+                                "TSOT_Phase_Ring"
                         )
                 ),
                 0.1f,
-                true,
+                false,
                 true);
-                MarketAPI market3 = addMarketplace("TSOT_Hermit", moon2, null,
-                "II - IX",
-                6,
+        market2.addIndustry(Industries.POPULATION,Arrays.asList(Items.CORONAL_PORTAL));
+        market2.getIndustry(Industries.POPULATION).setAICoreId(Commodities.ALPHA_CORE);
+        market2.addIndustry(Industries.LIGHTINDUSTRY);
+        market2.getIndustry(Industries.LIGHTINDUSTRY).setAICoreId(Commodities.ALPHA_CORE);
+
+        MarketAPI market3 = addMarketplace("TSOT_Hermit", station_2, null,
+                "研究站 - 圣杯",
+                4,
                 new ArrayList<>(
                         Arrays.asList(
-                                Conditions.POPULATION_7
+                                Conditions.POPULATION_4,
+                                "TSOT_ResearchStation"
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
                                 Submarkets.SUBMARKET_OPEN,
-                                Submarkets.GENERIC_MILITARY,
                                 Submarkets.SUBMARKET_BLACK,
                                 Submarkets.SUBMARKET_STORAGE
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
-                                Industries.POPULATION,
                                 Industries.MEGAPORT,
-                                Industries.FARMING,
                                 Industries.STARFORTRESS_HIGH,
                                 Industries.HEAVYBATTERIES,
-                                Industries.HIGHCOMMAND,
-                                Industries.ORBITALWORKS,
-                                Industries.FUELPROD,
-                                Industries.WAYSTATION
+                                Industries.PATROLHQ,
+                                Industries.WAYSTATION,
+                                "TSOT_Reverse_Spiral",
+                                "TSOT_Phase_Ring"
                         )
                 ),
                 0.1f,
-                true,
+                false,
                 true);
-                MarketAPI market4 = addMarketplace("TSOT_Hermit", moon3, null,
-                "III - IX",
-                6,
+        market3.addIndustry(Industries.POPULATION,Arrays.asList(Items.CORONAL_PORTAL));
+        market3.getIndustry(Industries.POPULATION).setAICoreId(Commodities.ALPHA_CORE);
+        market3.addIndustry(Industries.ORBITALWORKS,Arrays.asList(Items.PRISTINE_NANOFORGE));
+        market3.getIndustry(Industries.ORBITALWORKS).setAICoreId(Commodities.ALPHA_CORE);
+
+        MarketAPI market4 = addMarketplace("TSOT_Hermit", station_3, null,
+                "研究站 - 权杖",
+                4,
                 new ArrayList<>(
                         Arrays.asList(
-                                Conditions.POPULATION_7
+                                Conditions.POPULATION_4,
+                                "TSOT_ResearchStation"
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
                                 Submarkets.SUBMARKET_OPEN,
-                                Submarkets.GENERIC_MILITARY,
                                 Submarkets.SUBMARKET_BLACK,
                                 Submarkets.SUBMARKET_STORAGE
                         )
                 ),
                 new ArrayList<>(
                         Arrays.asList(
-                                Industries.POPULATION,
                                 Industries.MEGAPORT,
-                                Industries.FARMING,
                                 Industries.STARFORTRESS_HIGH,
                                 Industries.HEAVYBATTERIES,
-                                Industries.HIGHCOMMAND,
-                                Industries.ORBITALWORKS,
-                                Industries.FUELPROD,
-                                Industries.WAYSTATION
+                                Industries.PATROLHQ,
+                                Industries.WAYSTATION,
+                                "TSOT_Reverse_Spiral",
+                                "TSOT_Phase_Ring"
                         )
                 ),
                 0.1f,
-                true,
+                false,
                 true);
+        market4.addIndustry(Industries.POPULATION,Arrays.asList(Items.CORONAL_PORTAL));
+        market4.getIndustry(Industries.POPULATION).setAICoreId(Commodities.ALPHA_CORE);
+        market4.addIndustry(Industries.FUELPROD);
+        market4.getIndustry(Industries.FUELPROD).setAICoreId(Commodities.ALPHA_CORE);
+
+        MarketAPI market5 = addMarketplace("TSOT_Hermit", station_4, null,
+                "研究站 - 利剑",
+                4,
+                new ArrayList<>(
+                        Arrays.asList(
+                                Conditions.POPULATION_4,
+                                "TSOT_ResearchStation"
+                        )
+                ),
+                new ArrayList<>(
+                        Arrays.asList(
+                                Submarkets.SUBMARKET_OPEN,
+                                Submarkets.SUBMARKET_BLACK,
+                                Submarkets.SUBMARKET_STORAGE
+                        )
+                ),
+                new ArrayList<>(
+                        Arrays.asList(
+                                Industries.MEGAPORT,
+                                Industries.STARFORTRESS_HIGH,
+                                Industries.HEAVYBATTERIES,
+                                Industries.WAYSTATION,
+                                "TSOT_Reverse_Spiral",
+                                "TSOT_Phase_Ring"
+                        )
+                ),
+                0.1f,
+                false,
+                true);
+        market5.addIndustry(Industries.POPULATION,Arrays.asList(Items.CORONAL_PORTAL));
+        market5.getIndustry(Industries.POPULATION).setAICoreId(Commodities.ALPHA_CORE);
+        market5.addIndustry(Industries.HIGHCOMMAND);
+        market5.getIndustry(Industries.HIGHCOMMAND).setAICoreId(Commodities.ALPHA_CORE);
         
         JumpPointAPI jumpPointCharkha = Global.getFactory().createJumpPoint("TSOT_IX_jp", "The Fool's Road");
-        jumpPointCharkha.setCircularOrbit(star, 165f, 3600, 240);
+        jumpPointCharkha.setCircularOrbit(planet, 165f, 600, 240);
         jumpPointCharkha.setRelatedPlanet(planet);
         system.addEntity(jumpPointCharkha);
         system.autogenerateHyperspaceJumpPoints(true, true);
         system.generateAnchorIfNeeded();
+
     }
     
     public static MarketAPI addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name,

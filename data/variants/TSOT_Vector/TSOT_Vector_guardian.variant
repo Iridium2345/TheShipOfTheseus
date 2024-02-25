@@ -1,7 +1,7 @@
 {
   "variantId": "TSOT_Vector_guardian",
   "hullId": "TSOT_Vector",
-  "displayName": "守护",
+  "displayName": "护道",
   "goalVariant": false,
   "fluxCapacitors": 20,
   "fluxVents": 19,

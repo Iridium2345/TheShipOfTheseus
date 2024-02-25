@@ -5,8 +5,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class AgreementBeginner extends TSOTAgreement {
 	
-	private static final float BONUS_V=0.02f;
-	private static final float BONUS_C=0.02f;
+	private static final float BONUS_V=0.01f;
+	private static final float BONUS_C=0.01f;
 
 	@Override
 	protected void increase(MutableShipStatsAPI stats,String id,float numFluxVents, float numFluxCapacitors) {
