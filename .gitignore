@@ -4,3 +4,4 @@ build
 *.jar
 libs
 *.lnk
+src/TheShipOfTheseus.code-workspace

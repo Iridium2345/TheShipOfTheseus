@@ -99,12 +99,12 @@ public class TSOTGen {
                                 Industries.POPULATION,
                                 Industries.MEGAPORT,
                                 Industries.FARMING,
-                                Industries.STARFORTRESS_HIGH,
                                 Industries.HEAVYBATTERIES,
                                 Industries.HIGHCOMMAND,
                                 Industries.LIGHTINDUSTRY,
                                 Industries.FUELPROD,
-                                Industries.WAYSTATION
+                                Industries.WAYSTATION,
+                                "TSOT_starfortress"
                         )
                 ),
                 0.1f,
@@ -136,7 +136,8 @@ public class TSOTGen {
                                 Industries.PATROLHQ,
                                 Industries.WAYSTATION,
                                 "TSOT_Reverse_Spiral",
-                                "TSOT_Phase_Ring"
+                                "TSOT_Phase_Ring",
+                                "TSOT_starfortress"
                         )
                 ),
                 0.1f,
@@ -171,7 +172,8 @@ public class TSOTGen {
                                 Industries.PATROLHQ,
                                 Industries.WAYSTATION,
                                 "TSOT_Reverse_Spiral",
-                                "TSOT_Phase_Ring"
+                                "TSOT_Phase_Ring",
+                                "TSOT_starfortress"
                         )
                 ),
                 0.1f,
@@ -206,7 +208,8 @@ public class TSOTGen {
                                 Industries.PATROLHQ,
                                 Industries.WAYSTATION,
                                 "TSOT_Reverse_Spiral",
-                                "TSOT_Phase_Ring"
+                                "TSOT_Phase_Ring",
+                                "TSOT_starfortress"
                         )
                 ),
                 0.1f,
@@ -240,7 +243,8 @@ public class TSOTGen {
                                 Industries.HEAVYBATTERIES,
                                 Industries.WAYSTATION,
                                 "TSOT_Reverse_Spiral",
-                                "TSOT_Phase_Ring"
+                                "TSOT_Phase_Ring",
+                                "TSOT_starfortress"
                         )
                 ),
                 0.1f,

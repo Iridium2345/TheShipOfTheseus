@@ -7,7 +7,7 @@
   "fluxVents": 50,
   "quality": 1,
   "permaMods": [],
-  "hullMods": ["TSOT_agreement_fearless"],
+  "hullMods": ["TSOT_agreement_guardian"],
   "weaponGroups": [
     {
       "autofire": false,

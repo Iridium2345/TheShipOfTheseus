@@ -49,4 +49,7 @@ os.system(JarCommand.format(
 os.chdir(str(path))
 
 with open("data/campaign/sim_opponents.csv","w",encoding="utf-8") as f:
+    f.write("variant id\n"+"\n".join(filter(lambda x:x.find("guardian")!=-1,[i.stem for i in (getVariantList(path))])))
+
+with open("data/campaign/sim_opponents_dev.csv","w",encoding="utf-8") as f:
     f.write("variant id\n"+"\n".join([i.stem for i in getVariantList(path)]))

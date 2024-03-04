@@ -14,7 +14,8 @@
   "builtInMods": [
     "TSOT_quantized_hull",
     "TSOT_weapon_power",
-    "TSOT_quantized_core"
+    "TSOT_quantized_core",
+    "reduced_explosion"
   ],
   "weaponSlots": [
     {

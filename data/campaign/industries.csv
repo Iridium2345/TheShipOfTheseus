@@ -1,3 +1,25 @@
 id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
 TSOT_Reverse_Spiral,逆位螺旋,15,600,,1,,,"industry,structure",,graphics/icons/industry/TSOT_Reverse_Spiral.png,data.industries.ReverseSpiral,"巨大的...建筑? 巨大的螺旋汲取蓝巨星星冕的能量和物质,转化为量子态的稳定物质",200,
 TSOT_Phase_Ring,相位环,15,600,,1,,,"industry,structure",,graphics/icons/industry/TSOT_Phase_Ring.png,data.industries.PhaseRing,"巨大的...建筑? 巨大的环状结构 将量子态的稳定物质高效率的转换成高纯度的工业原料,当然,也可以生产食品 ",201,
+
+TSOT_orbitalstation,轨道站 - 主宰纪元,50,90,,3,,TSOT_battlestation,"station, sub_item, unraidable, structure","{
+radius:55,
+variant:TSOT_Infinite_station1,
+fleetName:Orbital Station,
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于主宰纪元的标准轨道站，特点是极为厚重的装甲与不俗的火力。
+
+它的存在将阻止任何轰炸行动的发生。",2010,
+TSOT_battlestation,作战基地 - 主宰纪元,100,120,,4,TSOT_orbitalstation,TSOT_starfortress,"station, battlestation, unraidable, structure","{
+radius:65,
+variant:TSOT_Infinite_station2,
+fleetName:Battlestation,
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站，在原有基础上增建了厚重的棱堡与点防御平台，并加装了外挂装甲以提高其防御力。
+
+它的存在将阻止任何轰炸行动的发生。",2020,
+TSOT_starfortress,星际要塞 - 主宰纪元,200,180,,5,TSOT_battlestation,,"station, starfortress, unraidable, structure","{
+radius:70,
+variant:TSOT_Infinite_station3,
+fleetName:Star Fortress
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地，在原有基础上增建了大量的外挂装甲，在配备 城齿-级 无人机的同时布置了感应雷区。
+
+它的存在将阻止任何轰炸行动的发生。",2030,

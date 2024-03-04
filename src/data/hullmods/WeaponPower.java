@@ -54,6 +54,7 @@ public class WeaponPower extends BaseHullMod{
 
     @Override
     public void advanceInCombat(ShipAPI ship, float amount) {
+        if (!ship.isAlive())return;
         interval.advance(amount);
         CombatEngineAPI engine = Global.getCombatEngine();
         boolean player = ship == Global.getCombatEngine().getPlayerShip();

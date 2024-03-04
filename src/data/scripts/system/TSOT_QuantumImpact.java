@@ -16,8 +16,8 @@ import com.fs.starfarer.api.util.Misc;
 
 public class TSOT_QuantumImpact extends BaseShipSystemScript{
     public static final float MAX_CHARGE = 10000f;
-    public static final float HIT_POINT_PER_S=0.00025f;
-    public static final IntervalUtil interval = new IntervalUtil(0.033f, 0.033f);
+    public static final float HIT_POINT_PER_S=0.02f;
+    public IntervalUtil interval = new IntervalUtil(0.033f, 0.033f);
     
     public static final Color F = new Color(0,0,0,255);
     public static final Color C = new Color(255,255,255,255);
@@ -92,6 +92,8 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
         if (engine.isPaused())return;
         ShipAPI target =findTarget(ship);
         if(target==null)return;
+        interval.advance(engine.getElapsedInLastFrame());
+        if(!interval.intervalElapsed())return;
         if(state == State.ACTIVE){
             if(launched){engine.spawnEmpArc(
                 ship,
@@ -125,7 +127,7 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
             return;
         }        
         if(Charged>=MAX_CHARGE)return;
-        float ch=ship.getHitpoints()*HIT_POINT_PER_S;
+        float ch=ship.getHitpoints()*HIT_POINT_PER_S*interval.getElapsed();
         ship.setHitpoints(ship.getHitpoints()-ch);
         Charged=Math.min(Charged+ch,MAX_CHARGE);
         launched=false;

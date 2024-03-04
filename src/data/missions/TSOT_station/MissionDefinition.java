@@ -1,6 +1,5 @@
-package data.missions.TSOT_guardian;
+package data.missions.TSOT_station;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
@@ -33,28 +32,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// files in data/variants and data/variants/fighters
 		//api.addToFleet(FleetSide.PLAYER, "SRD_Equilibrium_standard", FleetMemberType.SHIP, true);
 
-		boolean isFlagship = true;
-		for (String testID : Global.getSettings().getAllVariantIds()) {
-			if(!Global.getSettings().getVariant(testID).hasHullMod("TSOT_agreement_guardian"))continue;
-			String Vid=Global.getSettings().getVariant(testID).getHullSpec().getHullId()+"_guardian";
-			
-			if (Vid.equals(testID)) {
-				api.addToFleet(FleetSide.PLAYER, testID, FleetMemberType.SHIP, isFlagship);
-				isFlagship = false;
-			}
-		}
+		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station1", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station2", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station3", FleetMemberType.SHIP, true);
 		
-		// Set up the enemy fleet.
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
+		for(int i=0;i<15;i++){
+			api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite", FleetMemberType.SHIP, false);
+		}
 		
 		// Set up the map.
 		float width = 10000f;

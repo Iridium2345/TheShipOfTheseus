@@ -18,6 +18,5 @@
 			"lib/**/*.jar",
 			"../../../starsector-core/*"
 		],
-		"java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk1.7.0_80"
     }
 }

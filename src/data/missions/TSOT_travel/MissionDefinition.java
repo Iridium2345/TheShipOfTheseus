@@ -35,6 +35,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		boolean isFlagship = true;
 		for (String testID : Global.getSettings().getAllVariantIds()) {
+			if(!Global.getSettings().getVariant(testID).hasHullMod("TSOT_agreement_travel"))continue;
 			String Vid=Global.getSettings().getVariant(testID).getHullSpec().getHullId()+"_travel";
 			
 			if (Vid.equals(testID)) {
