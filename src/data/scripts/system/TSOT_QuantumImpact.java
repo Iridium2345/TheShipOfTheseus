@@ -46,7 +46,7 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
 		// The AI sets forceNextTarget, so if we're here, that target got destroyed in the last frame
 		// or it's using a different AI
 		// so, find *something* as a failsafe
-		
+        
 		if (!player) {
 			Object test = ship.getAIFlags().getCustom(AIFlags.MANEUVER_TARGET);
 			if (test instanceof ShipAPI) {
@@ -83,6 +83,7 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
         CombatEngineAPI engine = Global.getCombatEngine();
         ShipAPI ship= null;
         boolean player = false;
+        float size = 0;
         if (stats.getEntity() instanceof ShipAPI) {
             ship = (ShipAPI) stats.getEntity();
             player = ship == Global.getCombatEngine().getPlayerShip();
@@ -95,7 +96,8 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
         interval.advance(engine.getElapsedInLastFrame());
         if(!interval.intervalElapsed())return;
         if(state == State.ACTIVE){
-            if(launched){engine.spawnEmpArc(
+            if(launched){
+                engine.spawnEmpArc(
                 ship,
                 ship.getLocation(),
                 ship,
@@ -105,10 +107,11 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
                 Charged,
                 RANGE,
                 null,
-                15f+100f*Charged/MAX_CHARGE,
+                size,
                 F, C);
                 return;
             }
+            size=15f+100f*Charged/MAX_CHARGE;
             engine.spawnEmpArc(
                 ship,
                 ship.getLocation(),
@@ -119,7 +122,7 @@ public class TSOT_QuantumImpact extends BaseShipSystemScript{
                 Charged,
                 RANGE,
                 null,
-                10f+100f*Charged/MAX_CHARGE,
+                size,
                 F, 
                 C);
             launched=true;

@@ -47,7 +47,8 @@
     ],
     "startShipsSuper": [
         ["TSOT_Matrix_observer"],
-        ["TSOT_Manifold_builder"]
+        ["TSOT_Manifold_builder"],
+        ["TSOT_Infinite_station3"]
     ],
 
     "startSpecialItems": [

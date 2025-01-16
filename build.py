@@ -1,55 +1,27 @@
-import pathlib
-import os
-ClassPath=[
-    "../../starsector-core/*",
-]
+from builder.JBuilder import JavaProject,JavaGroup,javac,JFilter,java,jar
 
-BuildPath="build"
+import time
 
-Args=["-encoding UTF-8"]
+BuildPath="./build/"
 
-BuildCommand="javac -d {build_path} -classpath {class_path} {args} {file_path}\n"
+project=JavaProject()
+tsot:JavaGroup=project.addGroup("TheShipOfTheseus",JavaGroup)
+tsot.WorkPath="./"
+tsot.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 
-JarName="../jars/TheShipOfTheseus.jar"
+(java@tsot).addArg(java.Arg.Version)
 
-JarCommand="jar -cvf {jar_name} {class_list}"
+(javac@tsot).addDir("./src/",JFilter.JavaFile()
+).addArg(javac.Arg.Dir,BuildPath
+).addArg(javac.Arg.Class_Path,["../../starsector-core/*","./libs/*"]
+).addArg(javac.Arg.Encoding,"UTF-8")
 
-path=pathlib.Path(__file__).parent
+(jar@tsot).addFile(f"{BuildPath} ."
+).addArg("-cvf"
+).setCustom(jar.AvailableCustom.jar_path,"./jars/"
+)
 
-def getList(path:pathlib.Path,FileType:str):
-    for file in path.iterdir():
-        if file.is_file():
-            if file.suffix==FileType:
-                yield file
-        else:
-            yield from getList(file,FileType)
+tsot.cmdlst()
+project.runGroup("TheShipOfTheseus")
 
-def getSrcList(path:pathlib.Path):
-    return getList(path,".java")
-
-def getClassList(path:pathlib.Path):
-    return getList(path,".class")
-
-def getVariantList(path:pathlib.Path):
-    return getList(path,".variant")
-
-os.system(BuildCommand.format(
-        build_path=BuildPath,
-        class_path=" ".join(ClassPath),
-        args=" ".join(Args),
-        file_path=" ".join([str(i.relative_to(path)) for i in getSrcList(path)])
-        ))
-os.chdir(BuildPath)
-
-os.system(JarCommand.format(
-        jar_name=JarName,
-        class_list=" ".join([str(i.relative_to(path.joinpath(BuildPath))) for i in getClassList(path.joinpath(BuildPath))])
-    ))
-
-os.chdir(str(path))
-
-with open("data/campaign/sim_opponents.csv","w",encoding="utf-8") as f:
-    f.write("variant id\n"+"\n".join(filter(lambda x:x.find("guardian")!=-1,[i.stem for i in (getVariantList(path))])))
-
-with open("data/campaign/sim_opponents_dev.csv","w",encoding="utf-8") as f:
-    f.write("variant id\n"+"\n".join([i.stem for i in getVariantList(path)]))
+print(time.asctime(time.localtime()))

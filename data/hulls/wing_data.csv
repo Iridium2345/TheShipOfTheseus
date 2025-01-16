@@ -1,4 +1,5 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
 TSOT_Skyline_wing,TSOT_Skyline_Fighter,"no_sell, TSOT_LPC_bp,fighter,fighter5 , auto_fighter, merc",3,,15,25,CLAW,4000,2500,750,1,FIGHTER,超级战斗机,32,8000,,,,,,,,,,,,,2421
 TSOT_Normal_wing,TSOT_Normal_Interceptor,"TSOT_LPC_bp,interceptor, interceptor5, auto_fighter, merc",3,,8,18,CLAW,1500,200,750,2,INTERCEPTOR,重型截击机,10,5000,,,,,,,,,,,,,2422
+TSOT_RRI_wing,TSOT_Skyline_Fighter,"no_sell , interceptor , interceptor5, auto_fighter,leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, merc",3,,8,18,CLAW,1500,200,750,2,INTERCEPTOR,重型截击机,10,5000,,,,,,,,,,,,,2422.1
 TSOT_Horizon_wing,TSOT_Horizon_Bomber,"no_sell, TSOT_LPC_bp,bomber,bomber5 , auto_fighter, merc",3,,8,18,V,4000,500,,1,BOMBER,战术轰炸机,10,6000,,,,,,,,,,,,,2423

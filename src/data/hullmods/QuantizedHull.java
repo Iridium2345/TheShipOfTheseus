@@ -1,6 +1,8 @@
 package data.hullmods;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -35,7 +37,17 @@ public class QuantizedHull extends BaseHullMod{
 
     public static final float WEAPON_ENGINE_BONUS=0.95f;
 
-    public static final float FRAG_TAKEN=0.5f;
+    public static final float FRAG_TAKEN=0.8f;
+    private static Map<HullSize,Float> BASE_ARMOR = new HashMap<HullSize,Float>();
+    
+    static {
+        BASE_ARMOR.put(HullSize.DEFAULT, 0f);
+        BASE_ARMOR.put(HullSize.FIGHTER, 5f);
+        BASE_ARMOR.put(HullSize.FRIGATE, 15f);
+        BASE_ARMOR.put(HullSize.DESTROYER, 30f);
+        BASE_ARMOR.put(HullSize.CRUISER, 60f);
+        BASE_ARMOR.put(HullSize.CAPITAL_SHIP, 150f);
+    }
 
     @Override
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -44,6 +56,7 @@ public class QuantizedHull extends BaseHullMod{
 		stats.getDynamic().getStat(Stats.EXPLOSION_RADIUS_MULT).modifyMult(id, RADIUS_MULT);
         stats.getEmpDamageTakenMult().modifyMult(id, 1f-WEAPON_ENGINE_BONUS);
         stats.getFragmentationDamageTakenMult().modifyMult(id,1-FRAG_TAKEN);
+        stats.getEffectiveArmorBonus().modifyFlat(id, BASE_ARMOR.get(hullSize));
     }
 
     @Override
@@ -75,9 +88,10 @@ public class QuantizedHull extends BaseHullMod{
     public String getDescriptionParam(int index, HullSize hullSize) {
 		if(index==0)return String.format("%.1f", REPAIR*100);
         if(index==1)return String.format("%.1f", (HITPOINTS_MULT-1)*100);
-        if(index==2)return String.format("%.1f", FRAG_TAKEN*100);
-        if(index==3)return String.format("%.1f", WEAPON_ENGINE_BONUS*100);
-        if(index==4)return String.format("%.1f", DAMAGE_TAKEN*100);
+        if(index==2)return String.format("%.1f", BASE_ARMOR.get(hullSize));
+        if(index==3)return String.format("%.1f", FRAG_TAKEN*100);
+        if(index==4)return String.format("%.1f", WEAPON_ENGINE_BONUS*100);
+        if(index==5)return String.format("%.1f", DAMAGE_TAKEN*100);
 		return null;
 	}
 }

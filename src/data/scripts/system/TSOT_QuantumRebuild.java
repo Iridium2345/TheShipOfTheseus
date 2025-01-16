@@ -18,13 +18,13 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
 	protected Object STATUSKEY3 = new Object();
 	protected Object STATUSKEY4 = new Object();
 
-    private static final IntervalUtil interval = new IntervalUtil(0.066f, 0.066f);
+    private IntervalUtil interval = new IntervalUtil(0.066f, 0.066f);
     
     protected float getRepairRate(){
         return 0.1f;
     }
 
-    private static final float FLUX = 3f;
+    private static final float FLUX = 6f;
     private static final float SOFT2HARD = 0.2f;
 
     private static final float MIN_USEABLE_HITPOINT=0.7f;

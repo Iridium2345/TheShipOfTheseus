@@ -33,7 +33,9 @@ public class TSOT_QuantumRaid extends BaseShipSystemScript{
 
     public List<ShipAPI> getWings(ShipAPI ship){
         List<ShipAPI> result = new ArrayList<ShipAPI>();
-        for(FighterWingAPI wing :ship.getAllWings())result.addAll(wing.getWingMembers());
+        for(FighterWingAPI wing :ship.getAllWings()){
+            result.addAll(wing.getWingMembers());
+        }
         return result;
     }
 
