@@ -4,7 +4,7 @@
     "author": "Iridum2345",
     "version": "0.1.0 Alpha",
     "description": "Null",
-    "gameVersion": "0.96a-RC10",
+    "gameVersion": "0.97a-RC11",
     "jars": ["jars/TheShipOfTheseus.jar"],
     "modPlugin": "data.TSOTPlugin"
 }
