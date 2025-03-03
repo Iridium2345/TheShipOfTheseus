@@ -1,0 +1,17 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../starsector-core/data"
+		}
+	],
+    "settings": {
+        "java.project.referencedLibraries": [],
+        "java.project.sourcePaths": [
+            "lib",
+            "src"
+        ]
+    }
+}

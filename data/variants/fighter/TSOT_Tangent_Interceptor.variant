@@ -1,0 +1,27 @@
+{
+    "hullId": "TSOT_Tangent",
+    "variantId": "TSOT_Tangent_Interceptor",
+    "displayName": "轻型截击机",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "quality": 1,
+    "hullMods":[],
+	"weaponGroups":[
+		{
+            "mode":"LINKED",
+		    "weapons":{
+		 			"WS 001":"TSOT_low_beam",
+		 	    },
+		},{
+            "mode":"LINKED",
+		    "weapons":{
+		 			"WS 002":"TSOT_low_beam",
+		 	    },
+		},{
+            "mode":"LINKED",
+		    "weapons":{
+		 			"WS 003":"TSOT_low_beam",
+		 	    },
+		}
+	],
+}

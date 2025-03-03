@@ -1,0 +1,21 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\commons-compiler.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\commons-compiler-jdk.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\fs.common_obf.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\fs.sound_obf.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\janino.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\jinput.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\jogg-0.0.7.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\jorbis-0.0.15.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\json.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\log4j-1.2.9.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\lwjgl.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\lwjgl_util.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\port_obf.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\starfarer_obf.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\xstream-1.4.10.jar",
+        "d:\\Iridium\\desktop\\StarSector\\starsector-core\\starfarer.api.jar"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+	"baseHullId":"TSOT_Skyline",
+	"skinHullId":"TSOT_SkylineS",
+	"hullName":"天际线S",
+	"descriptionPrefix":"天际线 的改进型搭载了火力引导设备和更强的武器 但是部署代价极其高昂",
+	"tags":[],
+	"tech":"S",
+	"systemId":"TSOT_RRI_fighter",
+	"spriteName":"graphics/ships/remnants/lux.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons":{
+    },
+}
