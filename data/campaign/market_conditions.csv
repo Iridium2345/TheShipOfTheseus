@@ -1,2 +1,2 @@
 name,id,planetary,decivRemove,script,desc,icon,order
-研究站,TSOT_ResearchStation,,TRUE,data.econ.ResearchStation,"此地是一座轨道研究站,只有工作人员和研究员会在此地驻留,这也使左径人员难以渗透",graphics/icons/markets/TSOT_ResearchStation.png,142
+研究站,TSOT_ResearchStation,,TRUE,data.econ.ResearchStation,"此地是一座轨道研究站,只有数千工作人员和研究员在此地驻留,使左径人员难以渗透",graphics/icons/markets/TSOT_ResearchStation.png,142

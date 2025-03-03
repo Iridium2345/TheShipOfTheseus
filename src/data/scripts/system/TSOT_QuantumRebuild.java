@@ -9,7 +9,6 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.util.IntervalUtil;
-import com.fs.starfarer.api.combat.FluxTrackerAPI;
 
 public class TSOT_QuantumRebuild extends BaseShipSystemScript{
 
@@ -23,9 +22,6 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
     protected float getRepairRate(){
         return 0.1f;
     }
-
-    private static final float FLUX = 6f;
-    private static final float SOFT2HARD = 0.2f;
 
     private static final float MIN_USEABLE_HITPOINT=0.7f;
     
@@ -98,13 +94,6 @@ public class TSOT_QuantumRebuild extends BaseShipSystemScript{
             ship.getMaxHitpoints()
             ));
 
-        FluxTrackerAPI tracker=ship.getFluxTracker();
-        float decreasedFlux=Math.min(
-            tracker.getCurrFlux()-tracker.getHardFlux(),
-             FLUX * increasedHitpoint
-        );
-        tracker.decreaseFlux(decreasedFlux);
-        tracker.increaseFlux(decreasedFlux*SOFT2HARD, true);
     }
     @Override
     public void unapply(MutableShipStatsAPI stats,String id){

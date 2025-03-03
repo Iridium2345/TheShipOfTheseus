@@ -47,7 +47,7 @@ public abstract class TSOTAgreement extends BaseHullMod {
 		}else{
 			return;
 		}
-        decrease(stats,id+"de",FluxVents,FluxCapacitors);
+        //decrease(stats,id+"de",FluxVents,FluxCapacitors);
         increase(stats,id,FluxVents,FluxCapacitors);
     }
 	

@@ -33,8 +33,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		//api.addToFleet(FleetSide.PLAYER, "SRD_Equilibrium_standard", FleetMemberType.SHIP, true);
 
 		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station1", FleetMemberType.SHIP, true);
-		// api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station2", FleetMemberType.SHIP, true);
-		// api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station3", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station2", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station3", FleetMemberType.SHIP, true);
 		
 		for(int i=0;i<15;i++){
 			api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite", FleetMemberType.SHIP, false);

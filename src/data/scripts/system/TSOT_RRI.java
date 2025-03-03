@@ -1,74 +1,75 @@
 package data.scripts.system;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.CombatEngineLayers;
-import com.fs.starfarer.api.combat.ShipwideAIFlags;
-import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.fleet.FleetMemberType;
-import com.fs.starfarer.api.combat.FighterWingAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
-import com.fs.starfarer.api.combat.ShipSystemAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Personalities;
-import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
-import com.fs.starfarer.api.mission.FleetSide;
-import com.fs.starfarer.api.util.IntervalUtil;
 
-import data.hullmods.StationSpawn;
 
 public class TSOT_RRI extends BaseShipSystemScript{
     
-    protected Object STATUSKEY1 = new Object();
-
     public static final Color COLOR = new Color(240,240,240,120);
-    
-    private IntervalUtil interval = new IntervalUtil(0.5f, 0.5f);
+    public static final String WPN_ID = "TSOT_Support";
+    public static final Random random = new Random(System.nanoTime());
+    private boolean spawn = false;
+    private final float genYPos = 11000f;
 
-    private boolean spawned = false;
+    public static enum Status {
+        PLAYER("Support Fire: Deployed", "graphics/icons/hullsys/active_flare_launcher.png",false),
+        ENEMY("Support Fire: Incoming", "graphics/icons/mission_marker.png",true);
+
+        protected final String title;
+        protected final String sprite;
+        protected final boolean debuff;
+        private Status(String title,String sprite,boolean debuff){
+            this.title = title;
+            this.sprite = sprite;
+            this.debuff = debuff;
+        }
+    }
 
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
-        ShipAPI ship= null;
-        CombatEngineAPI engine=Global.getCombatEngine();
-        if (stats.getEntity() instanceof ShipAPI) {
-            ship = (ShipAPI) stats.getEntity();
-        } else return;
-        if(state.equals(State.IN)){
-            if(!spawned){
-                spawned=true;
-                ship.setCustomData(StationSpawn.NEED_SPAWN, true);
+        if (!(stats.getEntity() instanceof ShipAPI))return;
+        final ShipAPI ship = (ShipAPI)stats.getEntity();
+        final CombatEngineAPI engine = Global.getCombatEngine();
+        switch (state) {
+            case IN:{
+                spawn = false;
+                break;
             }
-            
-            // for(ShipAPI module:station.getChildModulesCopy()){
-            //     module.setCollisionClass(CollisionClass.NONE);
-            //     module.setCollisionRadius(0);
-            //     module.getShield().toggleOff();
-            // }
-        };
-        if(state.equals(State.ACTIVE));
-        if(state.equals(State.OUT))spawned=false;
-        if(state.equals(State.COOLDOWN));
-    }
-
-    @Override
-    public boolean isUsable(ShipSystemAPI system, ShipAPI ship) {
-        return true;
-    }
-
-    @Override
-    public void unapply(MutableShipStatsAPI stats,String id){
+            case ACTIVE:{
+                if (!spawn) {
+                    final int owner = ship.getOwner() == 1 ? 1 : -1;
+                    final Vector2f spawnPos = new Vector2f(100f*(random.nextFloat() - .5f) , genYPos * owner);
+                    final float genFacing = -90 * owner + 30f*(random.nextFloat()-.5f);
+                    engine.spawnProjectile(
+                        ship,
+                        null,
+                        WPN_ID,
+                        spawnPos, 
+                        genFacing, 
+                        null
+                    );
+                    spawn = true;
+                    final Status status = owner == -1 ? Status.PLAYER : Status.ENEMY;
+                    engine.maintainStatusForPlayerShip(
+                        status, status.sprite, status.title , ship.getSystem().getDisplayName() , status.debuff);
+                }
+                break;
+            }
+            case OUT:{
+                break;
+            }
+            default:
+                
+                break;
+        }
     }
 }

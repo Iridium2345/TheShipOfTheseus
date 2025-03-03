@@ -1,15 +1,18 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
 量子 SRM,TSOT_Quantum_srm,3,,40000,1500,,500,,15,50,0,1,0,,ENERGY,500,,0,0.5,1,,0,0,0,0,,600,200,3,250,,,"DO_NOT_AIM, DO_NOT_CONSERVE","utility8, missile9, strike7,TSOT_WP,restricted",,未知,,反小型舰艇,极快,优秀,,,,,,,TRUE,3110
 量子 LRM,TSOT_Quantum_lrm,3,,40000,4500,,250,,15,50,0,1,0,,ENERGY,500,,0,0.5,1,,0,0,0,0,,300,200,15,50,,,"DO_NOT_AIM, DO_NOT_CONSERVE","utility8, missile9, strike7,TSOT_WP,restricted",,未知,,反小型舰艇,极快,优秀,,,,,,,TRUE,3110
-彗星,TSOT_LARGE,3,,80000,1000,,400,0,10,20,25,,,,ENERGY,600,,0,2,,,0,0,0,3,,1000,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP",,,,,,,,,,,,,,3122.26
-流星,TSOT_MEDIUM,3,,40000,800,,150,0,10,20,12,,,,ENERGY,185,5,0,0.75,,,0,0,0,3,,1200,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP,ind",,,,,,,,,,,,,,3122.27
-陨星,TSOT_SMALL,3,,20000,700,,100,0,10,20,5,,,,ENERGY,135,,0,1,,,0,0,0,3,,1350,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP,ind",,,,,,,,,,,,,,3122.28
+彗星,TSOT_LARGE,3,,80000,1000,,800,0,10,20,25,,,,ENERGY,1000,,0,2,,,0,0,0,3,,1000,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP",,,,,,,,,,,,,,3122.26
+流星,TSOT_MEDIUM,3,,40000,800,,300,0,10,20,12,,,,ENERGY,360,5,0,0.75,,,0,0,0,3,,1200,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP,ind",,,,,,,,,,,,,,3122.27
+陨星,TSOT_SMALL,3,,20000,700,,200,0,10,20,5,,,,ENERGY,250,,0,1,,,0,0,0,3,,1350,,,,,,,"energy15,TSOT_weapon_bp,TSOT_WP,ind",,,,,,,,,,,,,,3122.28
 
 星芒突袭者,TSOT_Starlight_Raider,3,,80000,900,,500,0,10,20,30,,,,HIGH_EXPLOSIVE,3500,,0,15,,,0,0,0,3,,800,,,,,,,"energy15,TSOT_WP,ind",,,,,,,,,,,,,,3123
 星辉压制者,TSOT_Starlight_Suppressor,3,,80000,900,,500,0,10,20,30,,,,KINETIC,3500,,0,15,,,0,5,1,3,,800,,,,,,,"energy15,TSOT_WP,ind",,,,,,,,,,,,,,3124
 
-星尘,TSOT_dust,2,,2000,550,,15,10,1,75,5,60,6,4,KINETIC,30,,0,0.15,2,0,0,4,1,10,,1000,,,10,,,PD,"pd7, SR, TSOT_weapon_bp,merc,TSOT_WP, ind",,,,点防御,,,,,,,,,,1
-星尘-六联装,TSOT_dustx6,3,,8000,550,,10,10,1,75,12,180,12,6,KINETIC,15,,0,0.3,6,0,0,4,1,10,,1000,,,10,,,"PD","pd7, SR, merc,TSOT_WP,ind",,,,点防御,,,,,,,,,,1
+星尘,TSOT_dust,2,,2000,750,,20,10,0,75,5,60,6,4,HIGH_EXPLOSIVE,20,,0,0.15,2,0,0,4,1,10,,1000,,,10,,,PD,"pd7, SR, TSOT_weapon_bp,merc,TSOT_WP, ind",,,,点防御,,,,,,,,,,3125
+星尘-六联装,TSOT_dustx6,3,,8000,750,,20,10,0,75,12,180,12,6,HIGH_EXPLOSIVE,20,,0,0.3,6,0,0,4,1,10,,1000,,,10,,,"PD","pd7, SR, merc,TSOT_WP,ind",,,,点防御,,,,,,,,,,3126
 
-
-毁灭者协议,TSOT_Destroyer,3,,0,3000,,400,1500,200,0,0,1,,,ENERGY,0,,0,1,1,,0,0,0,0,,500,0,10,100000,,,"DIRECT_AIM, SYSTEM",restricted,,,,导弹,较快,普通,,,,,,,TRUE,41
+毁灭者协议,TSOT_Destroyer,3,,0,3000,,400,1500,200,0,0,1,,,ENERGY,0,,0,1,1,,0,0,0,0,,500,0,60,100000,,,"DIRECT_AIM, SYSTEM",restricted,,,,导弹,较快,普通,,,,,,,TRUE,31241
+支援射击,TSOT_Support,3,,0,100000,,2500,1000,200,0,0,0,,,FRAGMENTATION,0,,0,1,1,,0,0,0,0,,2000,0,75,1000,,,"DIRECT_AIM, SYSTEM",restricted,,,,导弹,较快,普通,,,,,,,TRUE,31241
+智能激光,TSOT_hil_beam,3,,1500,1000,400,,,0,15,30,,,,ENERGY,,500,0.5,0.2,,,,,,,9600,,,,,,,PD_ALSO,"beam20, pd7 ,TSOT_weapon_bp, LR, merc, ind",,,,点防御,,,,,,,,,,31261
+中强度激光,TSOT_med_beam,3,,1500,1000,300,,,0,20,10,,,,FRAGMENTATION,,150,0.1,0.1,,,,,,,9600,,,,,,,PD,"beam12, pd7 ,TSOT_weapon_bp, LR, merc, ind",,,,点防御,,,,,,,,,,31271
+低强度激光,TSOT_low_beam,3,,1200,1000,80,,,0,30,6,,,,FRAGMENTATION,,40,0.1,0.1,,,,,,,9600,,,,,,,PD,"beam12, pd7 , TSOT_weapon_bp , LR, merc, ind",,,,点防御,,,,,,,,,,31281

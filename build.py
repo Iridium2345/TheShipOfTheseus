@@ -1,6 +1,8 @@
 from builder.JBuilder import JavaProject,JavaGroup,javac,JFilter,java,jar
-
 import time
+import sys
+from pathlib import Path
+import os
 
 BuildPath="./build/"
 
@@ -8,6 +10,9 @@ project=JavaProject()
 tsot:JavaGroup=project.addGroup("TheShipOfTheseus",JavaGroup)
 tsot.WorkPath="./"
 tsot.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
+pkg:JavaGroup=project.addGroup("pkg",JavaGroup)
+pkg.WorkPath="./build"
+pkg.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 
 (java@tsot).addArg(java.Arg.Version)
 
@@ -16,12 +21,15 @@ tsot.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 ).addArg(javac.Arg.Class_Path,["../../starsector-core/*","./libs/*"]
 ).addArg(javac.Arg.Encoding,"UTF-8")
 
-(jar@tsot).addFile(f"{BuildPath} ."
+(jar@pkg).addFile(f" ."
 ).addArg("-cvf"
-).setCustom(jar.AvailableCustom.jar_path,"./jars/"
-)
+).setCustom(jar.AvailableCustom.jar_path,Path("./jars/").absolute()
+).setCustom(jar.AvailableCustom.jar_file,"TheShipOfTheseus.jar")
 
-tsot.cmdlst()
-project.runGroup("TheShipOfTheseus")
-
+project.start()
 print(time.asctime(time.localtime()))
+if "start" in sys.argv :
+    os.chdir("../../")
+    os.system(
+        "start starsector.exe",
+    )

@@ -7,10 +7,22 @@
     "quality": 1,
     "hullMods":[],
 	"weaponGroups":[
-		{"mode":"LINKED",
-		 "weapons":{
-		 			"WS 001":"TSOT_dust",
-                    "WS 002":"TSOT_dust"
+		{
+            "mode":"LINKED",
+		    "weapons":{
+		 			"WS 001":"TSOT_low_beam",
+		 		   },
+		},
+        {
+            "mode":"LINKED",
+		    "weapons":{
+                    "WS 002":"TSOT_dust",
+		 		   },
+		},
+        {
+            "mode":"LINKED",
+		    "weapons":{
+                    "WS 003":"TSOT_low_beam"
 		 		   },
 		},
 	],

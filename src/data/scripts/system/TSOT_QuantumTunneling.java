@@ -10,7 +10,7 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
 public class TSOT_QuantumTunneling extends BaseShipSystemScript{
 
-    private static final float SHIPTIMEMULT = 5f;
+    private static final float SHIPTIMEMULT = 2f;
 
     private static final float MAXSPEED = 1.5f;
 

@@ -53,12 +53,12 @@
 
     "startSpecialItems": [
         [
-            ["TSOT_LPC_bp_package", ""]
+            ["TSOT_LPC_bp_package", "TSOT_Agreement_Pack", "TSOT_weapon_bp_package", "TSOT_ship_bp_package"]
         ]
     ],
 
     "defenceStations": [
-        { "ids": ["orbitalstation_high", "battlestation_high", "starfortress_high"] }
+        { "ids": ["TSOT_Infinite_station1", "TSOT_Infinite_station2", "TSOT_Infinite_station3"] }
     ],
 
     "industrySeeds": [

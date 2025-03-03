@@ -9,17 +9,17 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 001":"TSOT_MEDIUM"
+		 			"WS 001":"TSOT_dust"
 		 		   },
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 002":"TSOT_dustx6",
+		 			"WS 002":"TSOT_med_beam",
 		 		   },
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 003":"TSOT_dustx6",
+		 			"WS 003":"TSOT_dust",
 		 		   },
 		},
 	],

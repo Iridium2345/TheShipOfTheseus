@@ -11,7 +11,8 @@
     ],
     "builtInMods": [
         "TSOT_quantized_hull",
-        "TSOT_weapon_power"
+        "TSOT_weapon_power",
+        "TSOT_adv_beam"
     ],
     "center": [
         16,

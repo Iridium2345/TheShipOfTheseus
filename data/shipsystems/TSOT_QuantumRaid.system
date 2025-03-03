@@ -3,7 +3,7 @@
 	"type":"TELEPORTER",
 	"aiType":"PHASE_TELEPORTER_2",
 	
-	"statsScript":"data.scripts.system.TSOT_RRI",
+	"statsScript":"data.scripts.system.TSOT_QuantumRaid",
 	
 	"canNotCauseOverload":false,
 	"runScriptWhileIdle":false,  # this means unapply() never gets called
