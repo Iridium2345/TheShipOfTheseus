@@ -1,0 +1,10 @@
+{
+	"baseHullId":"TSOT_Infinite",
+	"skinHullId":"TSOT_Infinite_station2",
+	"hullName":"无量",
+	"tags":[],	
+	"removeHints":[SHIP_WITH_MODULES],
+	"addHints":[STATION],
+	"fleetPoints":750,
+	"builtInMods":["supercomputer","chassis_storage","TSOT_Inf_Station"],
+}

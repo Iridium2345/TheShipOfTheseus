@@ -9,10 +9,10 @@ BuildPath="./build/"
 project=JavaProject()
 tsot:JavaGroup=project.addGroup("TheShipOfTheseus",JavaGroup)
 tsot.WorkPath="./"
-tsot.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
+# tsot.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 pkg:JavaGroup=project.addGroup("pkg",JavaGroup)
 pkg.WorkPath="./build"
-pkg.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
+# pkg.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 
 (java@tsot).addArg(java.Arg.Version)
 
@@ -28,6 +28,8 @@ pkg.JavaHome="D:\\app\java\java-se-7u75-ri\\bin"
 
 project.start()
 print(time.asctime(time.localtime()))
+
+
 if "start" in sys.argv :
     os.chdir("../../")
     os.system(

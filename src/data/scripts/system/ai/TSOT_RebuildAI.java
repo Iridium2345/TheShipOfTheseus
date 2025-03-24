@@ -33,7 +33,10 @@ public class TSOT_RebuildAI implements ShipSystemAIScript {
 		tracker.advance(amount);
 		
 		if (tracker.intervalElapsed()) {
-			ShipSystemAPI cloak = ship.getPhaseCloak();
+			ShipSystemAPI cloak;
+			if (ship.getPhaseCloak() != null)
+			cloak = ship.getPhaseCloak();
+			else cloak = ship.getSystem();
 			if (cloak == null) cloak = ship.getSystem();
 			if (cloak == null) return;
 			if (cloak.isActive()){
@@ -45,7 +48,7 @@ public class TSOT_RebuildAI implements ShipSystemAIScript {
 			else{
 				TTK_YZMTTK();
 			}
-			if (ship.getHitpoints()/ship.getMaxHitpoints() <= 0.45f) {
+			if (ship.getHitpoints()/ship.getMaxHitpoints() <= 0.3f) {
 				cloak.forceState(ShipSystemAPI.SystemState.ACTIVE,cloak.getChargeActiveDur());
 				cloak.setAmmo(cloak.getAmmo()-1);
 				return;

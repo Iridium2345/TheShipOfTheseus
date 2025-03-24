@@ -1,1 +1,3 @@
 id,trigger,conditions,script,text,options,notes
+#build,OpenInteractionDialog,"$tag:TSOT_coronal_tap
+!$hasMarket","OpenCoreTab CARGO OPEN ""ESCAPE""",,0:defaultLeave:建立殖民地,

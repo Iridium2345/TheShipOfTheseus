@@ -44,11 +44,11 @@ public abstract class TSOTAgreement extends BaseHullMod {
 			ShipAPI ship=(ShipAPI)stats.getEntity();
 			FluxVents=(float)ship.getVariant().getNumFluxVents();
 			FluxCapacitors=(float)ship.getVariant().getNumFluxCapacitors();
+			increase(stats,id,FluxVents,FluxCapacitors);
 		}else{
 			return;
 		}
         //decrease(stats,id+"de",FluxVents,FluxCapacitors);
-        increase(stats,id,FluxVents,FluxCapacitors);
     }
 	
 	@Override

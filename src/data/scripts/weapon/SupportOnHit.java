@@ -18,6 +18,21 @@ public class SupportOnHit  implements OnHitEffectPlugin{
     private static final Color COLOR_Fringe = new Color(255, 25, 255,150);
 	public static final int NUM_OF_ARC = 10;
 	
+	private static final DamagingExplosionSpec spec = new DamagingExplosionSpec(
+				2f, // duration
+				1000f, // radius
+				100f, // coreRadius
+				10f,10f, 
+				CollisionClass.PROJECTILE_FF, // collisionClass
+				CollisionClass.PROJECTILE_FIGHTER, // collisionClassByFighter
+				5f, // particleSizeMin
+				2f, // particleSizeRange
+				1.5f, // particleDuration
+				10, // particleCount
+				new Color(55,55,55), // particleColor
+				new Color(15,15,15)  // explosionColor
+			);
+
 	public void onHit(
         DamagingProjectileAPI projectile,
         CombatEntityAPI target,
@@ -26,22 +41,9 @@ public class SupportOnHit  implements OnHitEffectPlugin{
         ApplyDamageResultAPI damageResult,
         CombatEngineAPI engine) {
 			float damage = projectile.getDamageAmount();
-			DamagingExplosionSpec spec = new DamagingExplosionSpec(
-				0.05f, // duration
-				1000f, // radius
-				100f, // coreRadius
-				damage*.5f, // maxDamage
-				damage*.2f, // minDamage
-				CollisionClass.PROJECTILE_FF, // collisionClass
-				CollisionClass.PROJECTILE_FIGHTER, // collisionClassByFighter
-				5f, // particleSizeMin
-				2f, // particleSizeRange
-				0.8f, // particleDuration
-				10, // particleCount
-				new Color(55,55,55), // particleColor
-				new Color(15,15,15)  // explosionColor
-			);
-		spec.setDamageType(DamageType.FRAGMENTATION);
+		spec.setMaxDamage(projectile.getDamageAmount()*.5f);
+		spec.setMinDamage(projectile.getDamageAmount()*.2f);
+		spec.setDamageType(DamageType.ENERGY);
 		spec.setUseDetailedExplosion(true);
         engine.spawnDamagingExplosion(spec,projectile.getSource(), point);
 

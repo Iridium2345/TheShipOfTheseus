@@ -1,5 +1,8 @@
 package data.missions.TSOT_station;
 
+import java.util.Arrays;
+import java.util.List;
+
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
@@ -32,10 +35,24 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// files in data/variants and data/variants/fighters
 		//api.addToFleet(FleetSide.PLAYER, "SRD_Equilibrium_standard", FleetMemberType.SHIP, true);
 
-		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station1", FleetMemberType.SHIP, true);
-		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station2", FleetMemberType.SHIP, true);
-		api.addToFleet(FleetSide.PLAYER, "TSOT_Infinite_station3", FleetMemberType.SHIP, true);
-		
+		final List<String> tmp = Arrays.asList(
+			"TSOT_Infinite_station1",
+			"TSOT_Infinite_station2",
+			"TSOT_Infinite_station3",
+			"TSOT_Horizon_Bomber",
+			"TSOT_Normal_Interceptor",
+			"TSOT_Polyline_Bomber",
+			"TSOT_Skyline_Fighter",
+			"TSOT_SkylineS_Fighter",
+			"TSOT_Tangent_Interceptor"
+		);
+
+		boolean isFlagship = true;
+		for (final String string : tmp) {
+			api.addToFleet(FleetSide.PLAYER, string , FleetMemberType.SHIP, isFlagship);
+			isFlagship = false;
+		}
+
 		for(int i=0;i<15;i++){
 			api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite", FleetMemberType.SHIP, false);
 		}

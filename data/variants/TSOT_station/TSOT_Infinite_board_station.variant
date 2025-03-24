@@ -3,8 +3,8 @@
   "hullId": "TSOT_Infinite_board",
   "displayName": "纵深",
   "goalVariant": false,
-  "fluxCapacitors": 46,
-  "fluxVents": 46,
+  "fluxCapacitors": 39,
+  "fluxVents": 39,
   "quality": 1,
   "permaMods": [],
   "hullMods": ["TSOT_agreement_guardian"],
@@ -41,7 +41,7 @@
   "modules": [
   ],
   "wings": [
-    "TSOT_Normal_wing",
-    "TSOT_Normal_wing"
+    "TSOT_Skyline_wing",
+    "TSOT_Skyline_wing"
   ]
 }

@@ -24,20 +24,35 @@ public class WeaponPower extends BaseHullMod{
     public static final float WP_PER_WOP=0.001f;
 
     public static final float BASE_CR=0.3f; 
-
-    private Object key = new Object();
+    public static final float CR_EFF=0.5f; 
 
     static {
-        BASE.put(HullSize.FIGHTER, 1.1f);
-        BASE.put(HullSize.FRIGATE, 1.05f);
-        BASE.put(HullSize.DESTROYER, 1f);
-        BASE.put(HullSize.CRUISER, 0.95f);
-        BASE.put(HullSize.CAPITAL_SHIP, 0.9f);
+        BASE.put(HullSize.FIGHTER, 1.25f);
+        BASE.put(HullSize.FRIGATE, 1.20f);
+        BASE.put(HullSize.DESTROYER, 1.15f);
+        BASE.put(HullSize.CRUISER, 1.1f);
+        BASE.put(HullSize.CAPITAL_SHIP, 1.05f);
         BASE.put(HullSize.DEFAULT, 1f);
+    }
+
+    private static Map<HullSize,Float> range = new HashMap<HullSize,Float>();
+
+    private static final float PD_range = 0.4f;
+
+    static {
+        range.put(HullSize.FIGHTER, .05f);
+        range.put(HullSize.FRIGATE, 0.15f);
+        range.put(HullSize.DESTROYER, 0.2f);
+        range.put(HullSize.CRUISER, 0.4f);
+        range.put(HullSize.CAPITAL_SHIP, 0.6f);
     }
 
     @Override
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+        stats.getBallisticWeaponRangeBonus().modifyMult(id,1f+range.get(hullSize));
+	 	stats.getEnergyWeaponRangeBonus().modifyMult(id,1f+range.get(hullSize));
+        stats.getNonBeamPDWeaponRangeBonus().modifyMult(id,1f+PD_range);
+        stats.getBeamPDWeaponRangeBonus().modifyMult(id,1f+PD_range);
         ShipAPI ship = (stats.getEntity() instanceof ShipAPI)?(ShipAPI)stats.getEntity():null;
         if(ship==null)return;
         ship.setCustomData(KEY,new MutableStat(BASE.get(hullSize)));
@@ -61,26 +76,30 @@ public class WeaponPower extends BaseHullMod{
         MutableShipStatsAPI Mutable = ship.getMutableStats();
         MutableStat wp=(MutableStat)ship.getCustomData().get(KEY);
         
-        float cr=(ship.getCurrentCR()-BASE_CR)<=0?(1f+(ship.getCurrentCR()-BASE_CR)):(1f+(ship.getCurrentCR()-BASE_CR)*0.5f);
-        wp.modifyMultAlways(KEY,cr, KEY);
+        float cr=(ship.getCurrentCR()-BASE_CR)<=0?(1f+(ship.getCurrentCR()-BASE_CR)*CR_EFF):(1f+(ship.getCurrentCR()-BASE_CR)*CR_EFF);
+
+        final float weaponPower = 1 + wp.getModifiedValue() * cr * .2f;
+
         if(player){
             engine.maintainStatusForPlayerShip(this,
 				"graphics/icons/hullsys/flare_launcher.png", 
                 spec.getDisplayName(),
-                String.format("武器效率:%.1f%%",wp.getModifiedValue()*100), false);
-            engine.maintainStatusForPlayerShip(key,
-				"graphics/icons/hullsys/flare_launcher.png",
-                spec.getDisplayName(),
-                String.format("Cr:%.1f%% 武器效率x%.1f%%",ship.getCurrentCR()*100,cr*100), cr>=1?false:true);
+                String.format("武器效率:%.1f%%",weaponPower * 100), false);
         }
 
         if(!interval.intervalElapsed())return;
-        Mutable.getBallisticRoFMult().modifyMult(KEY,wp.getModifiedValue());
-        Mutable.getBallisticWeaponFluxCostMod().modifyMult(KEY, 1f+(wp.getModifiedValue()-1f)*0.33f);
-        Mutable.getBallisticWeaponDamageMult().modifyMult(KEY, wp.getModifiedValue());
-        Mutable.getEnergyRoFMult().modifyMult(KEY,wp.getModifiedValue());
-        Mutable.getEnergyWeaponFluxCostMod().modifyMult(KEY, 1f+(wp.getModifiedValue()-1f)*0.33f);
-        Mutable.getEnergyWeaponDamageMult().modifyMult(KEY, wp.getModifiedValue());
+        
+        Mutable.getBallisticRoFMult().modifyMult(KEY,weaponPower);
+        Mutable.getBallisticWeaponFluxCostMod().modifyMult(KEY, weaponPower);
+        Mutable.getBallisticWeaponDamageMult().modifyMult(KEY, weaponPower);
+
+        Mutable.getEnergyRoFMult().modifyMult(KEY,weaponPower);
+        Mutable.getEnergyWeaponFluxCostMod().modifyMult(KEY, weaponPower);
+        Mutable.getEnergyWeaponDamageMult().modifyMult(KEY, weaponPower);
+
+        Mutable.getBeamWeaponDamageMult().modifyMult(KEY, weaponPower);
+        Mutable.getBeamWeaponDamageMult().modifyMult(KEY+"_2", weaponPower);
+
         ship.setCustomData(KEY, wp);
     }
 

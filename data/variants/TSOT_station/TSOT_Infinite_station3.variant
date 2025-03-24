@@ -1,6 +1,6 @@
 {
   "variantId": "TSOT_Infinite_station3",
-  "hullId": "TSOT_Infinite",
+  "hullId": "TSOT_Infinite_station3",
   "displayName": "纵深",
   "goalVariant": false,
   "fluxCapacitors": 50,
@@ -62,7 +62,7 @@
     {"WS0025":"TSOT_Infinite_weapon_station"},
   ],
   "wings": [
-    "TSOT_Normal_wing",
-    "TSOT_Normal_wing"
+    "TSOT_Tangent_wing",
+    "TSOT_Tangent_wing"
   ]
 }

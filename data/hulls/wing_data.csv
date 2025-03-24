@@ -1,6 +1,7 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
 TSOT_Skyline_wing,TSOT_Skyline_Fighter,"no_sell, TSOT_LPC_bp,fighter,fighter5 , auto_fighter, merc",3,,15,25,CLAW,8000,2500,750,2,FIGHTER,超级战斗机,50,10000,,,,,,,,,,,,,2421
 TSOT_SkylineS_wing,TSOT_SkylineS_Fighter,"no_sell, TSOT_LPC_bp,fighter,fighter5 , auto_fighter, merc",3,,30,40,CLAW,8000,2500,750,1,FIGHTER,超级战斗机,50,80000,,,,,,,,,,,,,2421.1
-TSOT_Normal_wing,TSOT_Normal_Interceptor,"TSOT_LPC_bp,interceptor, interceptor5, auto_fighter, merc",3,,8,18,V,4500,200,750,3,INTERCEPTOR,重型截击机,40,8000,,,,,,,,,,,,,2422
-TSOT_Tangent_wing,TSOT_Tangent_Interceptor,"TSOT_LPC_bp,interceptor, interceptor5, auto_fighter, merc",3,,8,12,V,3500,200,750,6,INTERCEPTOR,轻型截击机,25,5000,,,,,,,,,,,,,2422
-TSOT_Horizon_wing,TSOT_Horizon_Bomber,"no_sell, TSOT_LPC_bp,bomber,bomber5 , auto_fighter, merc",3,,8,18,V,8000,500,,2,BOMBER,战术轰炸机,10,6000,,,,,,,,,,,,,2423
+TSOT_Normal_wing,TSOT_Normal_Interceptor,"TSOT_LPC_bp,interceptor, interceptor5, auto_fighter, merc",3,,12,18,V,4500,200,750,3,INTERCEPTOR,重型截击机,40,8000,,,,,,,,,,,,,2422
+TSOT_Tangent_wing,TSOT_Tangent_Interceptor,"TSOT_LPC_bp,interceptor, interceptor5, auto_fighter, merc",3,,12,12,V,3500,200,750,6,INTERCEPTOR,轻型截击机,25,5000,,,,,,,,,,,,,2422
+TSOT_Horizon_wing,TSOT_Horizon_Bomber,"no_sell, TSOT_LPC_bp,bomber,bomber5 , auto_fighter, merc",3,,12,18,V,8000,500,,2,BOMBER,战术轰炸机,10,6000,,,,,,,,,,,,,2423
+TSOT_Polyline_wing,TSOT_Polyline_Bomber,"no_sell, TSOT_LPC_bp,bomber,bomber5 , auto_fighter, merc",3,,10,24,CLAW,8000,2000,300,6,BOMBER,轰炸机,40,6000,,,,,,,,,,,,,2424

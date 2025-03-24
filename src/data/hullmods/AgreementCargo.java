@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 public class AgreementCargo extends TSOTAgreement{
     static{
@@ -44,7 +45,7 @@ public class AgreementCargo extends TSOTAgreement{
         cargo = cf4hullsize.get(hullSize).cargo*FluxVents;
         fuel = cf4hullsize.get(hullSize).fuel*FluxCapacitors;
         stats.getCargoMod().modifyFlat(id, cargo);
-        stats.getFuelMod().modifyFlat(id, fuel);
+        stats.getFuelMod().modifyFlat(id, fuel);   
     }
 
     @Override

@@ -10,9 +10,9 @@ import data.hullmods.WeaponPower;
 
 public class TSOT_ttk extends BaseShipSystemScript{
     
-    public static final float MAX_WEAPON_POWER = 0.8f;
-    public static final float WEAPON_FLUX_REDUCE = 1f;
-    public static final float MAX_RANGE_REDUCE = 0.1f;
+    public static final float MAX_WEAPON_POWER = 1.5f;
+    public static final float WEAPON_FLUX_REDUCE = 0.5f;
+    public static final float MAX_RANGE_REDUCE = 0.7f;
 
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {

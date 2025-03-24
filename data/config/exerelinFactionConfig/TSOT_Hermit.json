@@ -48,7 +48,7 @@
     "startShipsSuper": [
         ["TSOT_Matrix_observer"],
         ["TSOT_Manifold_builder"],
-        ["TSOT_Infinite_station3"]
+        ["TSOT_Infinite_fearless", "TSOT_Tensor_cargo", "TSOT_Tensor_cargo"]
     ],
 
     "startSpecialItems": [
@@ -58,7 +58,7 @@
     ],
 
     "defenceStations": [
-        { "ids": ["TSOT_Infinite_station1", "TSOT_Infinite_station2", "TSOT_Infinite_station3"] }
+        { "ids": ["TSOT_orbitalstation", "TSOT_battlestation", "TSOT_starfortress"] }
     ],
 
     "industrySeeds": [

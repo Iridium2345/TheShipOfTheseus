@@ -1,0 +1,21 @@
+{
+	"id":"TSOT_RRI_fighter",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.system.ai.TSOT_SupportAI",
+	
+	"statsScript":"data.scripts.system.TSOT_RRI",
+	
+	"canNotCauseOverload":false,
+	"runScriptWhileIdle":false,  # this means unapply() never gets called
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_termination_sequence",
+	"outOfUsesSound":"gun_out_of_ammo",
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":1500,
+		"averageSpeedIncrease":350,
+	}
+}
+

@@ -28,9 +28,6 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 光束调整,TSOT_adv_beam,3,,,,,,,,,10,20,30,40,data.hullmods.AdvancedBeam,"",,,graphics/hullmods/TSOT_quantized_core.png
 
-量子定位核心,TSOT_quantized_core,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.QuantizedCore,"增加 %s%% 攻击范围
-点防类武器提高 %s",,,graphics/hullmods/TSOT_quantized_core.png
-
 量子化舰体,TSOT_quantized_hull,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.QuantizedHull,"每秒恢复 %s%% 结构
 结构增加 %s%% , 计算伤害时装甲增加 %s%%
 受到的破片伤害减少 %s%%
@@ -45,3 +42,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 基础为 %s%%",,,graphics/hullmods/TSOT_weapon_power.png
 
 集成甲板,TSOT_Fighter_Integration,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.FighterIntegration,"",,,graphics/hullmods/TSOT_quantized_core.png
+,TSOT_Inf_Station,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.InfStation,"",,,graphics/hullmods/TSOT_quantized_core.png
+
+全自动舰船,automated,3,,,,,,,TRUE,,0,0,0,0,data.hullmods.AutomatedHacked,"能全自动化运作，无需人类船员操作。必须内置 否则CR清零",无需船员,,graphics/hullmods/automated.png
+全自动改装,TSOT_automated,3,,,,,,TRUE,,,0,0,0,0,data.hullmods.AutomatedManager,"能全自动化运作，无需人类船员操作。必须内置",无需船员,,graphics/hullmods/automated.png

@@ -1,17 +1,39 @@
 {
     "folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../starsector-core/data"
-		}
-	],
+        {
+            "path": "."
+        },
+        {
+            "path": "../../starsector-core"
+        }
+    ],
     "settings": {
-        "java.project.referencedLibraries": [],
+        "java.project.referencedLibraries": [
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\asm-debug-all.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\commons-compiler-3.0.12.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\commons-compiler-jdk-3.0.12.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\disruptor-4.0.0.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\fs.sound_obf_bufferlarger.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\janino-3.0.12.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\jaxb-api-2.4.0-b180830.0359.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\jcraft-jorbis-0.0.17.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\jinput.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\log4j-1.2-api-3.0.0-alpha1.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\log4j-api-3.0.0-alpha1.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\log4j-core-3.0.0-alpha1.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\log4j-plugins-3.0.0-alpha1.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\lwjgl.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\lwjgl_util.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\lzma.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\port.common_obf.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\port_obf.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\txw2-3.0.2.jar",
+            "d:\\Iridium\\Iridium2345\\game\\Starsector0.97a-RC11\\mikohime\\xstream-1.4.17.jar"
+        ],
         "java.project.sourcePaths": [
             "lib",
             "src"
-        ]
+        ],
+        "java.format.settings.url": "TheShipOfTheseus/.vscode/java-formatter.xml"
     }
 }

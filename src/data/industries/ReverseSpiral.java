@@ -10,10 +10,10 @@ public class ReverseSpiral extends BaseIndustry {
 		super.apply(true);
 		int size = market.getSize();
 		
-		demand(Commodities.HEAVY_MACHINERY, size - 1);
+		demand(Commodities.HEAVY_MACHINERY, size);
 		
-		supply("TSOT_Quantize_Matter", size*2-4);
-		
+		supply("TSOT_Quantize_Matter", size*2-3);
+		market.getAccessibilityMod().modifyMult(getId(), 1.2f , "ReverseSpiral");
 		if (!isFunctional()) {
 			supply.clear();
 		}
@@ -22,6 +22,7 @@ public class ReverseSpiral extends BaseIndustry {
 	
 	@Override
 	public void unapply() {
+		market.getAccessibilityMod().unmodify(getId());
 		super.unapply();
 	}
 	

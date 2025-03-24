@@ -32,6 +32,8 @@
   "modules": [
   ],
   "wings": [
-    "TSOT_Skyline_wing"
+    "TSOT_Polyline_wing",
+    "TSOT_Polyline_wing",
+    "TSOT_SkylineS_wing"
   ]
 }

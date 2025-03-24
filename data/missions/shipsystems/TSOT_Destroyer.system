@@ -1,0 +1,15 @@
+{
+	"id":"TSOT_Destroyer",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.system.ai.TSOT_DestroyerAI",
+	
+	"statsScript":"data.scripts.system.TSOT_Destroyer",
+	
+	"canNotCauseOverload":false,
+	"runScriptWhileIdle":false,  # this means unapply() never gets called
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_termination_sequence",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

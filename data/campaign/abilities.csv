@@ -1,0 +1,2 @@
+name,id,type,tags,activationDays,activationCooldown,durationDays,deactivationDays,deactivationCooldown,unlockedAtStart,defaultForAIFleet,musicSuppression,uiOn,uiOff,uiLoop,worldOn,worldOff,worldLoop,icon,plugin,ai,desc,sortOrder
+build station,TSOT_Build_Station,DURATION,,0.1,,0.001,0.1,500,TRUE,FALSE,,,,,,,,graphics/icons/abilities/direct_jump.png,data.scripts.skill.BuildStation,,,1800

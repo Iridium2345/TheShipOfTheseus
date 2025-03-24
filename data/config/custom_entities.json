@@ -21,7 +21,7 @@
         "showNameOnMap": true,
         "scaleNameWithZoom": false,
         "scaleIconWithZoom": true,
-        "tags": ["neutrino_high", "coronal_tap", "station"],
+        "tags": ["neutrino_high", "coronal_tap", "station", "TSOT_coronal_tap"],
         "layers": [STATIONS],
         "renderCircleIndicator": true,
         "renderCircleIndicatorSelectionFlash": true,

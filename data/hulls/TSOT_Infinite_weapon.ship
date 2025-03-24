@@ -14,9 +14,10 @@
   "builtInMods": [
     "TSOT_quantized_hull",
     "TSOT_weapon_power",
-    "TSOT_quantized_core",
     "reduced_explosion",
-    "TSOT_Fighter_Integration"
+    "TSOT_Fighter_Integration",
+    "advancedcore",
+    "chassis_storage"
   ],
   "weaponSlots": [
     {
