@@ -13,15 +13,14 @@ import com.fs.starfarer.api.util.IntervalUtil;
 public class TSOT_RebuildAI implements ShipSystemAIScript {
 
 	private ShipAPI ship;
-	private CombatEngineAPI engine;
 	private ShipwideAIFlags flags;
-	
+	private ShipSystemAPI system;
 	private IntervalUtil tracker = new IntervalUtil(0.5f, 1f);
 	
 	public void init(ShipAPI ship, ShipSystemAPI system, ShipwideAIFlags flags, CombatEngineAPI engine) {
 		this.ship = ship;
 		this.flags = flags;
-		this.engine = engine;
+		this.system = system;
 	}
 	
 	public void TTK_YZMTTK(){
@@ -31,26 +30,20 @@ public class TSOT_RebuildAI implements ShipSystemAIScript {
 
 	public void advance(float amount, Vector2f missileDangerDir, Vector2f collisionDangerDir, ShipAPI target) {
 		tracker.advance(amount);
-		
+		if (system == null) return;
 		if (tracker.intervalElapsed()) {
-			ShipSystemAPI cloak;
-			if (ship.getPhaseCloak() != null)
-			cloak = ship.getPhaseCloak();
-			else cloak = ship.getSystem();
-			if (cloak == null) cloak = ship.getSystem();
-			if (cloak == null) return;
-			if (cloak.isActive()){
+			if (system.isActive()){
 				TTK_YZMTTK();
 				return;
 			}
-			if (cloak.getCooldownRemaining() > 0) return;
-			if (cloak.isOutOfAmmo()) return;
+			if (system.getCooldownRemaining() > 0) return;
+			if (system.isOutOfAmmo()) return;
 			else{
 				TTK_YZMTTK();
 			}
 			if (ship.getHitpoints()/ship.getMaxHitpoints() <= 0.3f) {
-				cloak.forceState(ShipSystemAPI.SystemState.ACTIVE,cloak.getChargeActiveDur());
-				cloak.setAmmo(cloak.getAmmo()-1);
+				system.forceState(ShipSystemAPI.SystemState.ACTIVE,system.getChargeActiveDur());
+				system.setAmmo(system.getAmmo()-1);
 				return;
 			}
 		}

@@ -33,6 +33,10 @@ public abstract class TSOTAgreement extends BaseHullMod {
 		if (ship == null)return;
 		float FluxVents=(float)ship.getVariant().getNumFluxVents();
 		float FluxCapacitors=(float)ship.getVariant().getNumFluxCapacitors();
+		if(isSMod(ship)) {
+			FluxVents += 15;
+			FluxCapacitors += 15;
+		}
 		tooltip.addPara(getDescriptionVents(FluxVents),color,10f);
 		tooltip.addPara(getDescriptionCapacitors(FluxCapacitors),color,10f);
 	}

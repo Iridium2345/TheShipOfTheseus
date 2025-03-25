@@ -21,6 +21,10 @@ public class PhaseRing extends BaseIndustry {
 
 	private static final Map<String,Integer[]> weight = new HashMap<>();
 
+	private static final Map<String,Integer> num = new HashMap<>();
+
+	private static final Map<String,Float> day = new HashMap<>();
+
 	private static final Integer[] DEFAULT_WEIGHT = new Integer[]{70,25,5,0};
 
 	private static final String[] name = new String[]{
@@ -31,6 +35,14 @@ public class PhaseRing extends BaseIndustry {
 	};
 
 	static {
+		num.put(Commodities.GAMMA_CORE, 1);
+		num.put(Commodities.BETA_CORE, 2);
+		num.put(Commodities.ALPHA_CORE, 3);
+		num.put(Commodities.OMEGA_CORE, 4);
+		day.put(Commodities.GAMMA_CORE, 1.5f);
+		day.put(Commodities.BETA_CORE, .2f);
+		day.put(Commodities.ALPHA_CORE, 3f);
+		day.put(Commodities.OMEGA_CORE, 4f);
 		weight.put(Commodities.GAMMA_CORE , new Integer[]{50,40,10,0});
 		weight.put(Commodities.BETA_CORE  , new Integer[]{40,40,20,0});
 		weight.put(Commodities.ALPHA_CORE , new Integer[]{30,40,25,5});
@@ -73,24 +85,8 @@ public class PhaseRing extends BaseIndustry {
 		
 		float x = Global.getSector().getClock().convertToDays(amount);
 		String s = Optional.ofNullable(getAICoreId()).orElse("null");
-
-		switch (s) {
-			case Commodities.OMEGA_CORE:
-				x *= 4f;
-				break;
-			case Commodities.ALPHA_CORE:
-				x *= 2f;
-				break;
-			case Commodities.BETA_CORE:
-				x *= 1.5f;
-				break;
-			case Commodities.GAMMA_CORE:
-				x *= 1f;
-				break;
-			default:
-				x *= .5f;
-				break;
-		}
+		int num = PhaseRing.num.getOrDefault(s, 1);
+		x *= day.getOrDefault(s, 1f);
 		
 		Integer[] w = DEFAULT_WEIGHT;
 		w = weight.getOrDefault(s, DEFAULT_WEIGHT);
@@ -99,9 +95,8 @@ public class PhaseRing extends BaseIndustry {
 			runtime -= production_day_taken;
 			if (!market.isPlayerOwned()) return;
 			final SubmarketAPI subMarket = market.getSubmarket(SUBMARKET);
-			if (s.equals(Commodities.OMEGA_CORE)) for (int i = 0; i < 3; i++)
+			for (int i = 0; i < random.nextInt(1,num); i++)
 				subMarket.getPlugin().addAllCargo(getCargo(w));
-			subMarket.getPlugin().addAllCargo(getCargo(w));
 		}
 	}
 

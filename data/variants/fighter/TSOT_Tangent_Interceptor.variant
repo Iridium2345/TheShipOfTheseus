@@ -11,16 +11,8 @@
             "mode":"LINKED",
 		    "weapons":{
 		 			"WS 001":"TSOT_low_beam",
-		 	    },
-		},{
-            "mode":"LINKED",
-		    "weapons":{
 		 			"WS 002":"TSOT_low_beam",
-		 	    },
-		},{
-            "mode":"LINKED",
-		    "weapons":{
-		 			"WS 003":"TSOT_low_beam",
+		 			"WS 003":"TSOT_low_beam"
 		 	    },
 		}
 	],

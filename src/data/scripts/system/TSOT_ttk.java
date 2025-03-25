@@ -12,7 +12,7 @@ public class TSOT_ttk extends BaseShipSystemScript{
     
     public static final float MAX_WEAPON_POWER = 1.5f;
     public static final float WEAPON_FLUX_REDUCE = 0.5f;
-    public static final float MAX_RANGE_REDUCE = 0.7f;
+    public static final float MAX_RANGE_REDUCE = 0.45f;
 
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {

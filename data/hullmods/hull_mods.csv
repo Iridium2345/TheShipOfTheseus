@@ -1,28 +1,28 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
-无畏者协议,TSOT_agreement_fearless,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementFearless,"每个耗散通道增加 %s 最高航速
+无畏者协议,TSOT_agreement_fearless,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementFearless,"每个耗散通道增加 %s 最高航速
 每个寄存器增加 %s%% 武器效率 ",TSOT协议,,graphics/hullmods/TSOT_agreement_fearless.png
 
-护道者协议,TSOT_agreement_guardian,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
+护道者协议,TSOT_agreement_guardian,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementGuardian,"每个耗散通道增加 %s%% 结构
 每个寄存器增加 %s%% 减伤
 降低 %s%% 最高航速",TSOT协议,,graphics/hullmods/TSOT_agreement_guardian.png
 
-构建者协议,TSOT_agreement_builder,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementBuilder,"每个耗散通道增加 %s%% 整备速度
+构建者协议,TSOT_agreement_builder,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementBuilder,"每个耗散通道增加 %s%% 整备速度
 每个寄存器增加 %s%% 整备速度
 根据舰船级别增加 1~2 个飞行甲板
 降低 %s%% 舰体结构",TSOT协议,,graphics/hullmods/TSOT_agreement_builder.png
 
-远眺者协议,TSOT_agreement_observer,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementObserver,"每个耗散通道增加 %s%% 武器射程
+远眺者协议,TSOT_agreement_observer,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementObserver,"每个耗散通道增加 %s%% 武器射程
 每个寄存器增加 %s 武器射程
 降低 %s%% 幅能耗散",TSOT协议,,graphics/hullmods/TSOT_agreement_observer.png
 
 协议:初心,TSOT_agreement_beginner,3,,,,TSOT协议,,,TRUE,,0,0,0,0,data.hullmods.AgreementBeginner,"每个耗散通道增加 %s%% 幅能耗散
 每个寄存器增加 %s%% 幅能容量",TSOT协议,,graphics/hullmods/TSOT_agreement_beginner.png
 
-协议:远行,TSOT_agreement_travel,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementTravel,"每个耗散通道增加 %s人员容量 
+协议:远行,TSOT_agreement_travel,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementTravel,"每个耗散通道增加 %s人员容量 
 每个寄存器增加 %s 突袭强度,不超过陆战队数量
 武器效率 -%s%%",TSOT协议,,graphics/hullmods/TSOT_agreement_travel.png
 
-协议:运载,TSOT_agreement_cargo,3,,,"no_build_in,TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementCargo,"每个耗散通道增加 %s 货舱容量
+协议:运载,TSOT_agreement_cargo,3,,,"TSOT_agreement",忒修斯协议,,,,,5,10,20,40,data.hullmods.AgreementCargo,"每个耗散通道增加 %s 货舱容量
 每个寄存器增加 %s 燃料容量
 武器效率 -%s%%",TSOT协议,,graphics/hullmods/TSOT_agreement_cargo.png
 

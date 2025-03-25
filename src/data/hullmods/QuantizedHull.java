@@ -45,8 +45,8 @@ public class QuantizedHull extends BaseHullMod implements HullModFleetEffect{
 
     private static final float FLUXDISSIPATION = .5f;
 
-    private static final float SOFT2HARD = .2f;
-    private static final float SOFT2HARD_RATE = .2f;
+    private static final float SOFT2HARD = .1f;
+    private static final float SOFT2HARD_RATE = .4f;
     private static final float BASEARMOR = .005f;
 
     static {
@@ -65,7 +65,7 @@ public class QuantizedHull extends BaseHullMod implements HullModFleetEffect{
         ARMOR.put(HullSize.CAPITAL_SHIP, .30f);
     }
 
-    private static final float HARDFLUX2ARMOR = 0.65f;
+    private static final float HARDFLUX2ARMOR = 0.75f;
     private static final float hardFlux2Armor(float flux){
         return (float) Math.pow(flux*HARDFLUX2ARMOR , HARDFLUX2ARMOR);
     } 
@@ -102,6 +102,7 @@ public class QuantizedHull extends BaseHullMod implements HullModFleetEffect{
         stats.getEngineDamageTakenMult().modifyMult(id, 1f-WEAPON_ENGINE_BONUS);
         stats.getSensorProfile().modifyMult(id, SensorProfile);
         stats.getSensorStrength().modifyMult(id, SensorStrength);
+		stats.getDynamic().getMod(Stats.MAX_PERMANENT_HULLMODS_MOD).modifyFlat(id, 1);
     }
 
     @SuppressWarnings("unused")
@@ -139,10 +140,8 @@ public class QuantizedHull extends BaseHullMod implements HullModFleetEffect{
         }
 
         SoftFlux2HardFlux:{
-            final float decreasedFlux=Math.min(
-                tracker.getCurrFlux()-tracker.getHardFlux(),
-                SOFT2HARD_RATE * tracker.getMaxFlux() * amount
-            );
+            final float softFlux = tracker.getCurrFlux()-tracker.getHardFlux();
+            final float decreasedFlux= softFlux * SOFT2HARD_RATE * amount;
             tracker.decreaseFlux(decreasedFlux);
             tracker.increaseFlux(decreasedFlux*SOFT2HARD, true);
         }
